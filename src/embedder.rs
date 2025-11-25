@@ -140,13 +140,17 @@ impl<D, T> Embedder<D, T> {
         D::EmbeddingSpace: Eq + Hash,
         T: Tokenizer,
     {
-        let tokens = self.tokenizer.tokenize(text);
         let avgdl = if self.avgdl <= 0.0 {
             Self::FALLBACK_AVGDL
         } else {
             self.avgdl
         };
-        let indices: Vec<D::EmbeddingSpace> = tokens.iter().map(|s| D::embed(s)).collect();
+        let indices: Vec<D::EmbeddingSpace> = self
+            .tokenizer
+            .tokenize(text)
+            .map(|s| D::embed(&s))
+            .collect();
+        let len = indices.len();
         let counts = indices.iter().fold(HashMap::new(), |mut acc, token| {
             let count = acc.entry(token).or_insert(0);
             *count += 1;
@@ -157,8 +161,8 @@ impl<D, T> Embedder<D, T> {
             .map(|i| {
                 let token_frequency = *counts.get(i).unwrap_or(&0) as f32;
                 let numerator = token_frequency * (self.k1 + 1.0);
-                let denominator = token_frequency
-                    + self.k1 * (1.0 - self.b + self.b * (tokens.len() as f32 / avgdl));
+                let denominator =
+                    token_frequency + self.k1 * (1.0 - self.b + self.b * (len as f32 / avgdl));
                 numerator / denominator
             })
             .collect();
@@ -222,7 +226,7 @@ impl<D, T> EmbedderBuilder<D, T> {
             #[cfg(feature = "parallelism")]
             let corpus_iter = corpus.par_iter();
             let total_len: u64 = corpus_iter
-                .map(|doc| tokenizer.tokenize(doc).len() as u64)
+                .map(|doc| tokenizer.tokenize(doc).count() as u64)
                 .sum();
             (total_len as f64 / corpus.len() as f64) as f32
         };
@@ -440,12 +444,11 @@ mod tests {
         struct MyTokenizer {}
 
         impl Tokenizer for MyTokenizer {
-            fn tokenize(&self, input_text: &str) -> Vec<String> {
+            fn tokenize<'a>(&'a self, input_text: &'a str) -> impl Iterator<Item = String> + 'a {
                 input_text
-                    .split("T")
+                    .split('T')
                     .filter(|s| !s.is_empty())
                     .map(str::to_string)
-                    .collect()
             }
         }
 

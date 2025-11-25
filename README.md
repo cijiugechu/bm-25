@@ -172,7 +172,7 @@ let tokenizer = DefaultTokenizer::builder()
 
 let text = "Slices of 🍕";
 
-let tokens = tokenizer.tokenize(text);
+let tokens: Vec<_> = tokenizer.tokenize(text).collect();
 
 // 'slices' is stemmed to 'slice', 'of' is a stopword, and '🍕' is normalized to 'pizza'
 assert_eq!(tokens, vec!["slice", "pizza"]);
@@ -189,12 +189,11 @@ struct MyTokenizer;
 
 // Tokenize on occurrences of "T"
 impl Tokenizer for MyTokenizer {
-    fn tokenize(&self, input_text: &str) -> Vec<String> {
+    fn tokenize<'a>(&'a self, input_text: &'a str) -> impl Iterator<Item = String> + 'a {
         input_text
-            .split("T")
+            .split('T')
             .filter(|s| !s.is_empty())
             .map(str::to_string)
-            .collect()
     }
 }
 
@@ -415,4 +414,3 @@ cargo add bm-25 --features parallelism
 ## License
 
 [MIT License](https://github.com/cijiugechu/bm-25/blob/main/LICENSE)
-

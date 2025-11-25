@@ -2,5 +2,5 @@
 /// your own tokenizer.
 pub trait Tokenizer {
     /// Tokenizes the input text.
-    fn tokenize(&self, input_text: &str) -> Vec<String>;
+    fn tokenize<'a>(&'a self, input_text: &'a str) -> impl Iterator<Item = String> + 'a;
 }
