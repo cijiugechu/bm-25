@@ -243,9 +243,9 @@ bitflags! {
 impl Settings {
     fn new(stemming: bool, stopwords: bool, normalization: bool) -> Self {
         Settings::from_bits_retain(
-            normalization as u8 * Settings::NORMALIZATION.bits()
-                | stemming as u8 * Settings::STEMMING.bits()
-                | stopwords as u8 * Settings::STOPWORDS.bits(),
+            (normalization as u8 * Settings::NORMALIZATION.bits())
+                | (stemming as u8 * Settings::STEMMING.bits())
+                | (stopwords as u8 * Settings::STOPWORDS.bits()),
         )
     }
 
