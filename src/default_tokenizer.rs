@@ -5,6 +5,7 @@ use std::{
     collections::HashSet,
     fmt::{self, Debug},
 };
+use bitflags::bitflags;
 use stop_words::LANGUAGE as StopWordLanguage;
 #[cfg(feature = "language_detection")]
 use whichlang::Lang as DetectedLanguage;
@@ -157,20 +158,34 @@ fn get_stemmer(language: &Language) -> Stemmer {
     Stemmer::create(language.into())
 }
 
-#[derive(Clone, Debug)]
-struct Settings {
-    stemming: bool,
-    stopwords: bool,
-    normalization: bool,
+bitflags! {
+    #[derive(Clone, Copy, Debug, Default, Eq, PartialEq)]
+    struct Settings: u8 {
+        const NORMALIZATION = 1 << 0;
+        const STEMMING = 1 << 1;
+        const STOPWORDS = 1 << 2;
+    }
 }
 
 impl Settings {
     fn new(stemming: bool, stopwords: bool, normalization: bool) -> Self {
-        Settings {
-            stemming,
-            stopwords,
-            normalization,
-        }
+        Settings::from_bits_retain(
+            normalization as u8 * Settings::NORMALIZATION.bits()
+                | stemming as u8 * Settings::STEMMING.bits()
+                | stopwords as u8 * Settings::STOPWORDS.bits(),
+        )
+    }
+
+    fn normalization_enabled(self) -> bool {
+        self.contains(Settings::NORMALIZATION)
+    }
+
+    fn stemming_enabled(self) -> bool {
+        self.contains(Settings::STEMMING)
+    }
+
+    fn stopwords_enabled(self) -> bool {
+        self.contains(Settings::STOPWORDS)
     }
 }
 
@@ -183,21 +198,21 @@ struct Components {
 
 impl Components {
     fn new(settings: Settings, language: Option<&Language>) -> Self {
-        let stemmer = match language {
-            Some(lang) => match settings.stemming {
-                true => Some(get_stemmer(lang)),
-                false => None,
-            },
-            None => None,
-        };
-        let stopwords = match language {
-            Some(lang) => match settings.stopwords {
-                true => get_stopwords(lang.clone(), settings.normalization),
-                false => HashSet::new(),
-            },
-            None => HashSet::new(),
-        };
-        let normalizer: fn(&str) -> Cow<str> = match settings.normalization {
+        let stemmer = language.and_then(|lang| {
+            if settings.stemming_enabled() {
+                Some(get_stemmer(lang))
+            } else {
+                None
+            }
+        });
+        let stopwords = language.map_or_else(HashSet::new, |lang| {
+            if settings.stopwords_enabled() {
+                get_stopwords(lang.clone(), settings.normalization_enabled())
+            } else {
+                HashSet::new()
+            }
+        });
+        let normalizer: fn(&str) -> Cow<str> = match settings.normalization_enabled() {
             true => normalize,
             false => |text: &str| Cow::from(text),
         };
@@ -224,9 +239,9 @@ pub struct DefaultTokenizer {
 impl Debug for DefaultTokenizer {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let settings = match &self.resources {
-            Resources::Static(components) => components.settings.clone(),
+            Resources::Static(components) => components.settings,
             #[cfg(feature = "language_detection")]
-            Resources::Dynamic(settings) => settings.clone(),
+            Resources::Dynamic(settings) => *settings,
         };
         write!(f, "DefaultTokenizer({settings:?})")
     }
@@ -295,7 +310,7 @@ impl DefaultTokenizer {
             #[cfg(feature = "language_detection")]
             Resources::Dynamic(settings) => {
                 let detected_language = Self::detect_language(input_text);
-                let components = Components::new(settings.clone(), detected_language.as_ref());
+                let components = Components::new(*settings, detected_language.as_ref());
                 self._tokenize(input_text, &components)
             }
         }
