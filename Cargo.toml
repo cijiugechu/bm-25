@@ -1,5 +1,5 @@
 [package]
-name = "bm25"
+name = "bm-25"
 version = "2.3.2"
 description = "BM25 embedder, scorer, and search engine"
 repository = "https://github.com/Michael-JB/bm25"

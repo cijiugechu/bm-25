@@ -1,4 +1,4 @@
-use bm25::{EmbedderBuilder, Language, LanguageMode, TokenEmbedder};
+use bm_25::{EmbedderBuilder, Language, LanguageMode, TokenEmbedder};
 use divan::Bencher;
 use std::hash::Hash;
 

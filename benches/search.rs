@@ -1,6 +1,6 @@
 use std::{fs::File, io::BufReader};
 
-use bm25::{Document, EmbedderBuilder, Language, LanguageMode, SearchEngine, SearchEngineBuilder};
+use bm_25::{Document, EmbedderBuilder, Language, LanguageMode, SearchEngine, SearchEngineBuilder};
 use csv::Reader;
 use divan::Bencher;
 

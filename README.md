@@ -1,8 +1,8 @@
-# bm25
+# `bm-25`
 
-[![Docs](https://docs.rs/bm25/badge.svg)](https://docs.rs/bm25/)
-[![Crates.io Version](https://img.shields.io/crates/v/bm25)](https://crates.io/crates/bm25)
-[![Crates.io Total Downloads](https://img.shields.io/crates/d/bm25)](https://crates.io/crates/bm25)
+[![Docs](https://docs.rs/bm25/badge.svg)](https://docs.rs/bm-25/)
+[![Crates.io Version](https://img.shields.io/crates/v/bm-25)](https://crates.io/crates/bm-25)
+[![Crates.io Total Downloads](https://img.shields.io/crates/d/bm-25)](https://crates.io/crates/bm-25)
 
 A Rust crate for everything [BM25](https://en.wikipedia.org/wiki/Okapi_BM25). This crate provides
 utilities at three levels of abstraction:
@@ -46,10 +46,10 @@ given to recurring tokens. For almost all use-cases, a value of `1.2` is suitabl
 
 ## Getting started
 
-Add `bm25` to your project with
+Add `bm-25` to your project with
 
 ```sh
-cargo add bm25
+cargo add bm-25
 ```
 
 Depending on your use-case, you may want to read more about the [Embedder](#embed), [Scorer](#score)
@@ -62,7 +62,7 @@ most vector databases, or use them directly. The best way to embed some text is 
 to your corpus.
 
 ```rust
-use bm25::{Embedder, EmbedderBuilder, Embedding, TokenEmbedding, Language};
+use bm_25::{Embedder, EmbedderBuilder, Embedding, TokenEmbedding, Language};
 
 let corpus = [
     "The sky blushed pink as the sun dipped below the horizon.",
@@ -106,7 +106,7 @@ For cases where you don't have the full corpus ahead of time, but have an approx
 average meaningful word count you expect, you can construct an embedder with your `avgdl` guess.
 
 ```rust
-use bm25::{Embedder, EmbedderBuilder};
+use bm_25::{Embedder, EmbedderBuilder};
 
 let embedder: Embedder = EmbedderBuilder::with_avgdl(7.0)
     .build();
@@ -115,7 +115,7 @@ let embedder: Embedder = EmbedderBuilder::with_avgdl(7.0)
 If you want to disregard document length altogether, set `b` to 0.
 
 ```rust
-use bm25::{Embedder, EmbedderBuilder};
+use bm_25::{Embedder, EmbedderBuilder};
 
 let embedder: Embedder = EmbedderBuilder::with_avgdl(1.0)
     .b(0.0) // if b = 0, avgdl has no effect
@@ -128,7 +128,7 @@ By default, the embedder uses an English `DefaultTokenizer`. If you are working 
 language, you can configure the embedder to tokenize accordingly.
 
 ```rust
-use bm25::{Embedder, EmbedderBuilder, Language};
+use bm_25::{Embedder, EmbedderBuilder, Language};
 
 let embedder: Embedder = EmbedderBuilder::with_avgdl(256.0)
     .language_mode(Language::German)
@@ -139,7 +139,7 @@ If your corpus is multilingual, or you don't know the language ahead of time, yo
 `language_detection` feature.
 
 ```sh
-cargo add bm25 --features language_detection
+cargo add bm-25 --features language_detection
 ```
 
 This unlocks the `LanguageMode::Detect` enum value. In this mode, the tokenizer will try to detect
@@ -147,7 +147,7 @@ the language of each piece of input text before tokenizing. Note that there is a
 overhead when embedding in this mode.
 
 ```rust
-use bm25::{Embedder, EmbedderBuilder, LanguageMode};
+use bm_25::{Embedder, EmbedderBuilder, LanguageMode};
 
 let embedder: Embedder = EmbedderBuilder::with_avgdl(64.0)
     .language_mode(LanguageMode::Detect)
@@ -161,7 +161,7 @@ tokenizer detects language, normalizes unicode, splits on unicode word boundarie
 words and stems the remaining words. You can customise its behaviour by using the builder.
 
 ```rust
-use bm25::{DefaultTokenizer, Language, Tokenizer};
+use bm_25::{DefaultTokenizer, Language, Tokenizer};
 
 let tokenizer = DefaultTokenizer::builder()
     .language_mode(Language::English)
@@ -182,7 +182,7 @@ While this works well for most languages and use-cases, this crate makes it easy
 your own tokenizer. All you have to do is implement the `Tokenizer` trait.
 
 ```rust
-use bm25::{EmbedderBuilder, Embedding, Tokenizer};
+use bm_25::{EmbedderBuilder, Embedding, Tokenizer};
 
 #[derive(Default)]
 struct MyTokenizer;
@@ -212,7 +212,7 @@ If you're not using the `DefaultTokenizer` at all, you can disable the `default_
 to remove some dependencies from your project.
 
 ```sh
-cargo add bm25 --no-default-features
+cargo add bm-25 --no-default-features
 ```
 
 #### Embedding space
@@ -222,7 +222,7 @@ values are `usize`, `u32` and `u64`. You can also use your own type (and inject 
 function) by implementing the `TokenEmbedder` trait.
 
 ```rust
-use bm25::{EmbedderBuilder, TokenEmbedder};
+use bm_25::{EmbedderBuilder, TokenEmbedder};
 
 let text = "cup of tea";
 
@@ -268,7 +268,7 @@ as well as the actual scoring. Use this if you need BM25 scoring, but want to ma
 of raw documents yourself.
 
 ```rust
-use bm25::{Embedder, EmbedderBuilder, Language, Scorer, ScoredDocument};
+use bm_25::{Embedder, EmbedderBuilder, Language, Scorer, ScoredDocument};
 
 let corpus = [
     "The sky blushed pink as the sun dipped below the horizon.",
@@ -315,7 +315,7 @@ This crate includes a light-weight, in-memory keyword search engine built on top
 and scorer. See [bm25-demo](https://michael-jb.github.io/bm25-demo) for a WebAssembly demo.
 
 ```rust
-use bm25::{Document, Language, SearchEngineBuilder, SearchResult};
+use bm_25::{Document, Language, SearchEngineBuilder, SearchResult};
 
 let corpus = [
     "The rabbit munched the orange carrot.",
@@ -354,7 +354,7 @@ You can construct a search engine with documents (allowing you to customise the 
 value), or with an average document length.
 
 ```rust
-use bm25::{Document, Language, SearchEngineBuilder};
+use bm_25::{Document, Language, SearchEngineBuilder};
 
 // Build a search engine from documents
 let search_engine = SearchEngineBuilder::<&str>::with_documents(
@@ -382,7 +382,7 @@ by upserting or removing documents will change the true value of `avgdl`. The mo
 from its true value, the less accurate the BM25 scores will be.
 
 ```rust
-use bm25::{Document, SearchEngineBuilder};
+use bm_25::{Document, SearchEngineBuilder};
 
 let mut search_engine = SearchEngineBuilder::<u32>::with_avgdl(10.0)
     .build();
@@ -409,10 +409,10 @@ parallelise this via the `parallelism` feature, which implements data parallelis
 [Rayon](https://crates.io/crates/rayon).
 
 ```sh
-cargo add bm25 --features parallelism
+cargo add bm-25 --features parallelism
 ```
 
 ## License
 
-[MIT License](https://github.com/Michael-JB/bm25/blob/main/LICENSE)
+[MIT License](https://github.com/cijiugechu/bm-25/blob/main/LICENSE)
 
