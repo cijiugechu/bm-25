@@ -1,3 +1,4 @@
+use bitflags::bitflags;
 use cached::proc_macro::cached;
 use rust_stemmers::{Algorithm as StemmingAlgorithm, Stemmer};
 use std::{
@@ -5,7 +6,6 @@ use std::{
     collections::HashSet,
     fmt::{self, Debug},
 };
-use bitflags::bitflags;
 use stop_words::LANGUAGE as StopWordLanguage;
 #[cfg(feature = "language_detection")]
 use whichlang::Lang as DetectedLanguage;
