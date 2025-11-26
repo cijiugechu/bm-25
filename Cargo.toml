@@ -2,12 +2,12 @@
 name = "bm-25"
 version = "2.3.2"
 description = "BM25 embedder, scorer, and search engine"
-repository = "https://github.com/Michael-JB/bm25"
+repository = "https://github.com/cijiugechu/bm-25"
 license = "MIT"
 edition = "2021"
 keywords = ["bm25", "sparse", "embed", "search", "nlp"]
 categories = ["algorithms", "text-processing"]
-authors = ["Michael <michael@ramyun.co.uk>"]
+authors = ["nemurubaka <cijiugechu@gmail.com>", "Michael <michael@ramyun.co.uk>"]
 exclude = [
   ".github/**",
   "/snapshots/**",
