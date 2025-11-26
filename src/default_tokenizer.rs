@@ -39,7 +39,7 @@ pub enum Language {
 /// the dictionary of stopwords. This enum is non-exhaustive as the `Detect` variant is only
 /// available when the `language_detection` feature is enabled.
 #[non_exhaustive]
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum LanguageMode {
     /// Automatically detect the language. Note that this adds a small performance overhead.
     #[cfg(feature = "language_detection")]
