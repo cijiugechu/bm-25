@@ -14,7 +14,7 @@ use crate::tokenizer::Tokenizer;
 
 /// Languages supported by the tokenizer.
 #[allow(missing_docs)]
-#[derive(Debug, Clone, Eq, PartialEq, Hash)]
+#[derive(Debug, Clone, Copy, Eq, PartialEq, Hash)]
 pub enum Language {
     Arabic,
     Danish,
@@ -61,27 +61,57 @@ impl From<Language> for LanguageMode {
 }
 
 #[cfg(feature = "language_detection")]
+#[derive(Debug, PartialEq)]
+pub struct LanguageFromDetectionError {
+    pub lang: DetectedLanguage,
+}
+
+#[cfg(feature = "language_detection")]
+impl std::fmt::Display for LanguageFromDetectionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "Unsupported detected language: {:?}", self.lang)
+    }
+}
+
+#[cfg(feature = "language_detection")]
+impl std::error::Error for LanguageFromDetectionError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        None
+    }
+}
+
+#[cfg(feature = "language_detection")]
 impl TryFrom<DetectedLanguage> for Language {
-    type Error = ();
+    type Error = LanguageFromDetectionError;
 
     fn try_from(detected_language: DetectedLanguage) -> Result<Self, Self::Error> {
         match detected_language {
             DetectedLanguage::Ara => Ok(Language::Arabic),
-            DetectedLanguage::Cmn => Err(()),
+            DetectedLanguage::Cmn => Err(LanguageFromDetectionError {
+                lang: detected_language,
+            }),
             DetectedLanguage::Deu => Ok(Language::German),
             DetectedLanguage::Eng => Ok(Language::English),
             DetectedLanguage::Fra => Ok(Language::French),
-            DetectedLanguage::Hin => Err(()),
+            DetectedLanguage::Hin => Err(LanguageFromDetectionError {
+                lang: detected_language,
+            }),
             DetectedLanguage::Ita => Ok(Language::Italian),
-            DetectedLanguage::Jpn => Err(()),
-            DetectedLanguage::Kor => Err(()),
+            DetectedLanguage::Jpn => Err(LanguageFromDetectionError {
+                lang: detected_language,
+            }),
+            DetectedLanguage::Kor => Err(LanguageFromDetectionError {
+                lang: detected_language,
+            }),
             DetectedLanguage::Nld => Ok(Language::Dutch),
             DetectedLanguage::Por => Ok(Language::Portuguese),
             DetectedLanguage::Rus => Ok(Language::Russian),
             DetectedLanguage::Spa => Ok(Language::Spanish),
             DetectedLanguage::Swe => Ok(Language::Swedish),
             DetectedLanguage::Tur => Ok(Language::Turkish),
-            DetectedLanguage::Vie => Err(()),
+            DetectedLanguage::Vie => Err(LanguageFromDetectionError {
+                lang: detected_language,
+            }),
         }
     }
 }
@@ -110,8 +140,25 @@ impl From<&Language> for StemmingAlgorithm {
     }
 }
 
+#[derive(Debug, PartialEq)]
+pub struct StopWordLanguageError {
+    pub lang: Language,
+}
+
+impl std::fmt::Display for StopWordLanguageError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "Unsupported language: {:?}", self.lang)
+    }
+}
+
+impl std::error::Error for StopWordLanguageError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        None
+    }
+}
+
 impl TryFrom<&Language> for StopWordLanguage {
-    type Error = ();
+    type Error = StopWordLanguageError;
 
     fn try_from(language: &Language) -> Result<Self, Self::Error> {
         match language {
@@ -130,7 +177,7 @@ impl TryFrom<&Language> for StopWordLanguage {
             Language::Russian => Ok(StopWordLanguage::Russian),
             Language::Spanish => Ok(StopWordLanguage::Spanish),
             Language::Swedish => Ok(StopWordLanguage::Swedish),
-            Language::Tamil => Err(()),
+            Language::Tamil => Err(StopWordLanguageError { lang: *language }),
             Language::Turkish => Ok(StopWordLanguage::Turkish),
         }
     }
@@ -280,7 +327,7 @@ impl Components {
         });
         let stopwords = language.map_or_else(HashSet::new, |lang| {
             if settings.stopwords_enabled() {
-                get_stopwords(lang.clone(), settings.normalization_enabled())
+                get_stopwords(*lang, settings.normalization_enabled())
             } else {
                 HashSet::new()
             }
