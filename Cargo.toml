@@ -1,10 +1,11 @@
 [package]
 name = "bm-25"
-version = "3.0.0"
+version = "4.0.0"
 description = "BM25 embedder, scorer, and search engine"
 repository = "https://github.com/cijiugechu/bm-25"
 license = "MIT"
 edition = "2021"
+rust-version = "1.98"
 keywords = ["bm25", "sparse", "embed", "search", "nlp"]
 categories = ["algorithms", "text-processing"]
 authors = ["nemurubaka <cijiugechu@gmail.com>", "Michael <michael@ramyun.co.uk>"]
@@ -12,6 +13,10 @@ exclude = [
   ".github/**",
   "/snapshots/**",
   "/data/**",
+  "/experiments/**",
+  "/task_plan.md",
+  "/findings.md",
+  "/progress.md",
 ]
 
 [package.metadata.docs.rs]
@@ -54,4 +59,12 @@ harness = false
 
 [[bench]]
 name = "search"
+harness = false
+
+[[bench]]
+name = "scaling"
+harness = false
+
+[[bench]]
+name = "traversal"
 harness = false

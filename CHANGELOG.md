@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### 4.0.0 — breaking changes
+
+- Require Rust 1.98 and canonical, read-only embeddings constructed with
+  `Embedding::new`; duplicate document indices retain their first weight.
+- Separate query frequencies/boosts from document BM25 weights with `Query`.
+- Add reusable `Query::push`/`extend` with adaptive hash-assisted deduplication;
+  query construction requires `Eq + Hash + Clone` term types.
+- Batch matching posting blocks before scoring; automatically choose scan or
+  active-cursor heap traversal. Add `TraversalMode` overrides and traversal counters.
+- Replace hash-set postings and per-candidate vector scans with compact internal
+  IDs, flat sparse/dense document-range blocks, and conservative top-k block pruning.
+- Add `FrozenIndex`, snapshot-bound `PreparedQuery`, `SearchScratch`, borrowed
+  `SearchResultRef`, reusable `SearchWorkspace`, and `FrozenSearchEngine`.
+- Add a callback tokenizer path, share cached stopword sets, and tokenize each
+  corpus document once during fitting/building (parallel for large batches).
+- Generate SIMD from safe contiguous Rust scoring loops; offer explicit relaxed
+  arithmetic with pruning disabled. Strict arithmetic remains the default.
+- Stage mutable writes and rebuild the immutable snapshot on the next read.
+  See `MIGRATION.md` for API changes, update costs, and floating-point semantics.
+
 ## [2.3.2] - 2025-09-07
 
 ### Changed

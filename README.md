@@ -46,6 +46,9 @@ given to recurring tokens. For almost all use-cases, a value of `1.2` is suitabl
 
 ## Getting started
 
+Version 4 requires Rust 1.98 or newer. See [MIGRATION.md](MIGRATION.md) for
+the canonical embedding format, query semantics, and snapshot lifecycle changes.
+
 Add `bm-25` to your project with
 
 ```sh
@@ -79,7 +82,7 @@ let embedding = embedder.embed(corpus[1]);
 
 assert_eq!(
     embedding,
-    Embedding(vec![
+    Embedding::new(vec![
         TokenEmbedding {
             index: 1777144781,
             value: 1.1422123,
@@ -87,10 +90,6 @@ assert_eq!(
         TokenEmbedding {
             index: 3887370161,
             value: 1.1422123,
-        },
-        TokenEmbedding {
-            index: 2177600299,
-            value: 1.5037148,
         },
         TokenEmbedding {
             index: 2177600299,
@@ -255,7 +254,7 @@ let embedder = EmbedderBuilder::<MyType>::with_avgdl(2.0).build();
 let embedding = embedder.embed(text);
 assert_eq!(
     embedding.indices().cloned().collect::<Vec<_>>(),
-    [MyType(42), MyType(42)]
+    [MyType(42)]
 );
 ```
 
@@ -410,6 +409,68 @@ parallelise this via the `parallelism` feature, which implements data parallelis
 ```sh
 cargo add bm-25 --features parallelism
 ```
+
+For repeated queries, build a frozen index and reuse a workspace. The following
+path avoids copying result text and retains allocations between queries:
+
+```rust
+use bm_25::{Language, SearchEngineBuilder, SearchWorkspace};
+
+let engine = SearchEngineBuilder::<u32>::with_corpus(
+    Language::English,
+    ["bacon sandwich", "tomato soup", "avocado sandwich"],
+).build_frozen();
+let mut workspace = SearchWorkspace::default();
+let mut results = Vec::new();
+engine.search_into("sandwich", 10, &mut workspace, &mut results);
+assert_eq!(results.len(), 2);
+assert!(results.iter().all(|result| result.contents.contains("sandwich")));
+```
+
+When the query itself repeats, prepare its coefficients once against the immutable
+index. Preparation binds the query to that snapshot; using it with another index
+panics instead of silently reusing stale IDF values:
+
+```rust
+use bm_25::{Language, SearchEngineBuilder, SearchScratch};
+
+let engine = SearchEngineBuilder::<u32>::with_corpus(
+    Language::English, ["bacon sandwich", "tomato soup"],
+).build_frozen();
+let query = engine.embedder().query("bacon bacon");
+let prepared = engine.index().prepare(&query);
+let mut scratch = SearchScratch::default();
+let mut hits = Vec::new();
+engine.index().search_into(&prepared, 10, &mut scratch, &mut hits);
+assert_eq!(engine.index().document_id(hits[0].doc_id), Some(&0));
+```
+
+The index uses compact internal IDs, one-byte positions in sparse blocks, and
+contiguous weights in dense blocks. Strict scoring uses conservative block score
+bounds to skip blocks that cannot enter top-k. Equal scores prefer the lower
+snapshot-local document ID. `SearchScratch::stats` exposes pruning and block counters.
+
+Long sparse queries automatically use a heap of active posting cursors; short or
+highly overlapping queries use a scan. Both preserve query-term accumulation order.
+`SearchScratch::set_traversal_mode(TraversalMode::Scan)` / `Heap` lets you override
+the default `Auto` heuristic; `stats().traversal` reports the selected strategy.
+For text searches, configure this through `SearchWorkspace::ranking`.
+
+For weighted or generated queries, `Query::push` and `Query::extend` combine
+duplicate boosts in first-occurrence order. Large queries use hash-assisted lookup.
+`Query::clear` retains buffers for reuse; term types require `Eq + Hash + Clone`.
+
+`ScoringMode::Relaxed` explicitly permits floating-point algebraic rewrites and
+disables block pruning. It has unspecified precision and may change rankings;
+strict scoring is the default. Neither mode uses hand-written SIMD or unsafe code.
+
+Mutable engines stage writes and rebuild their cached index on the first search
+after a write batch. For read-heavy workloads, use `build_frozen` and publish a new
+engine when updating the corpus. Updating a mutable engine refreshes document
+frequencies but retains the fitted `avgdl`; rebuild from text to refit it.
+
+See [PERFORMANCE.md](PERFORMANCE.md) for reproducible benchmarks and code-generation
+checks, including the costs and limits of these choices.
 
 ## License
 

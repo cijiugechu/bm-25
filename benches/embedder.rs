@@ -38,7 +38,7 @@ fn language_mode(bencher: Bencher, language_mode: &LanguageMode) {
 fn token_embedder<T>(bencher: Bencher)
 where
     T: TokenEmbedder,
-    T::EmbeddingSpace: Hash + Eq,
+    T::EmbeddingSpace: Hash + Eq + Clone,
 {
     bencher
         .with_inputs(|| {

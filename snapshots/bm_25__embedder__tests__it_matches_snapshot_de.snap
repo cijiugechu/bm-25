@@ -1,6 +1,8 @@
 ---
 source: src/embedder.rs
+assertion_line: 535
 expression: embeddings
+snapshot_kind: text
 ---
 [
     Embedding(
@@ -78,10 +80,6 @@ expression: embeddings
                 value: 1.1032035,
             },
             TokenEmbedding {
-                index: 4146099564,
-                value: 1.4695115,
-            },
-            TokenEmbedding {
                 index: 660413556,
                 value: 1.1032035,
             },
@@ -150,14 +148,6 @@ expression: embeddings
                 value: 1.1032035,
             },
             TokenEmbedding {
-                index: 1024073086,
-                value: 1.4695115,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.4695115,
-            },
-            TokenEmbedding {
                 index: 482606066,
                 value: 1.1032035,
             },
@@ -174,20 +164,12 @@ expression: embeddings
                 value: 1.1032035,
             },
             TokenEmbedding {
-                index: 1366469460,
-                value: 1.4695115,
-            },
-            TokenEmbedding {
                 index: 2422101712,
                 value: 1.1032035,
             },
             TokenEmbedding {
                 index: 3405403236,
                 value: 1.1032035,
-            },
-            TokenEmbedding {
-                index: 825009273,
-                value: 1.4695115,
             },
             TokenEmbedding {
                 index: 3068588152,
@@ -274,20 +256,12 @@ expression: embeddings
                 value: 1.0883461,
             },
             TokenEmbedding {
-                index: 157101613,
-                value: 1.456271,
-            },
-            TokenEmbedding {
                 index: 1751372486,
                 value: 1.0883461,
             },
             TokenEmbedding {
                 index: 4216460842,
                 value: 1.0883461,
-            },
-            TokenEmbedding {
-                index: 746694451,
-                value: 1.456271,
             },
             TokenEmbedding {
                 index: 4146099564,
@@ -330,10 +304,6 @@ expression: embeddings
                 value: 1.0883461,
             },
             TokenEmbedding {
-                index: 4111676266,
-                value: 1.456271,
-            },
-            TokenEmbedding {
                 index: 2735291143,
                 value: 1.0883461,
             },
@@ -350,20 +320,12 @@ expression: embeddings
                 value: 1.456271,
             },
             TokenEmbedding {
-                index: 2472561585,
-                value: 1.6412132,
-            },
-            TokenEmbedding {
                 index: 988957291,
                 value: 1.0883461,
             },
             TokenEmbedding {
                 index: 2501400216,
                 value: 1.0883461,
-            },
-            TokenEmbedding {
-                index: 3948920979,
-                value: 1.456271,
             },
             TokenEmbedding {
                 index: 613846705,
@@ -378,10 +340,6 @@ expression: embeddings
                 value: 1.0883461,
             },
             TokenEmbedding {
-                index: 2472561585,
-                value: 1.6412132,
-            },
-            TokenEmbedding {
                 index: 150648461,
                 value: 1.0883461,
             },
@@ -392,14 +350,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2263788136,
                 value: 1.0883461,
-            },
-            TokenEmbedding {
-                index: 3943323503,
-                value: 1.456271,
-            },
-            TokenEmbedding {
-                index: 2198465861,
-                value: 1.456271,
             },
             TokenEmbedding {
                 index: 381474508,
@@ -510,14 +460,6 @@ expression: embeddings
                 value: 1.1421841,
             },
             TokenEmbedding {
-                index: 2418291178,
-                value: 1.7863907,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.5036904,
-            },
-            TokenEmbedding {
                 index: 1553184556,
                 value: 1.1421841,
             },
@@ -532,14 +474,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2672733735,
                 value: 1.1421841,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.6810429,
-            },
-            TokenEmbedding {
-                index: 2418291178,
-                value: 1.7863907,
             },
             TokenEmbedding {
                 index: 4175281439,
@@ -560,14 +494,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 4170915445,
                 value: 1.1421841,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.6810429,
-            },
-            TokenEmbedding {
-                index: 2418291178,
-                value: 1.7863907,
             },
             TokenEmbedding {
                 index: 3020303224,
@@ -658,10 +584,6 @@ expression: embeddings
                 value: 1.1107852,
             },
             TokenEmbedding {
-                index: 3057075191,
-                value: 1.8909602,
-            },
-            TokenEmbedding {
                 index: 1002011933,
                 value: 1.1107852,
             },
@@ -686,10 +608,6 @@ expression: embeddings
                 value: 1.1107852,
             },
             TokenEmbedding {
-                index: 3057075191,
-                value: 1.8909602,
-            },
-            TokenEmbedding {
                 index: 3136899720,
                 value: 1.1107852,
             },
@@ -700,10 +618,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2735291143,
                 value: 1.1107852,
-            },
-            TokenEmbedding {
-                index: 1791380059,
-                value: 1.4762224,
             },
             TokenEmbedding {
                 index: 2001115021,
@@ -730,10 +644,6 @@ expression: embeddings
                 value: 1.1107852,
             },
             TokenEmbedding {
-                index: 3057075191,
-                value: 1.8909602,
-            },
-            TokenEmbedding {
                 index: 2409636210,
                 value: 1.1107852,
             },
@@ -746,16 +656,8 @@ expression: embeddings
                 value: 1.1107852,
             },
             TokenEmbedding {
-                index: 3057075191,
-                value: 1.8909602,
-            },
-            TokenEmbedding {
                 index: 1032582097,
                 value: 1.1107852,
-            },
-            TokenEmbedding {
-                index: 1893674536,
-                value: 1.4762224,
             },
             TokenEmbedding {
                 index: 3776700327,
@@ -786,10 +688,6 @@ expression: embeddings
                 value: 1.1107852,
             },
             TokenEmbedding {
-                index: 3057075191,
-                value: 1.8909602,
-            },
-            TokenEmbedding {
                 index: 2422101712,
                 value: 1.1107852,
             },
@@ -800,10 +698,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3405403236,
                 value: 1.1107852,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.4762224,
             },
             TokenEmbedding {
                 index: 2801694572,
@@ -874,24 +768,12 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.7515821,
-            },
-            TokenEmbedding {
                 index: 2858395313,
                 value: 1.3414485,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7515821,
             },
             TokenEmbedding {
                 index: 3753032443,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 2858395313,
-                value: 1.3414485,
             },
             TokenEmbedding {
                 index: 1212244386,
@@ -906,15 +788,7 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 281564403,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
                 index: 746694451,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
-                index: 2501400216,
                 value: 1.3414485,
             },
             TokenEmbedding {
@@ -934,10 +808,6 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 3948920979,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
                 index: 613846705,
                 value: 0.96489686,
             },
@@ -946,16 +816,8 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.7515821,
-            },
-            TokenEmbedding {
                 index: 300763427,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.5420431,
             },
             TokenEmbedding {
                 index: 183901823,
@@ -964,10 +826,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 267694126,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.5420431,
             },
             TokenEmbedding {
                 index: 2752514965,
@@ -990,10 +848,6 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 323367964,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
                 index: 3955284103,
                 value: 1.3414485,
             },
@@ -1010,24 +864,8 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 3955284103,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
-                index: 746694451,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7515821,
-            },
-            TokenEmbedding {
                 index: 1305810068,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 2729346416,
-                value: 1.3414485,
             },
             TokenEmbedding {
                 index: 69570218,
@@ -1039,10 +877,6 @@ expression: embeddings
             },
             TokenEmbedding {
                 index: 3597055197,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
-                index: 1511485464,
                 value: 1.3414485,
             },
             TokenEmbedding {
@@ -1072,18 +906,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1553184556,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 1606870455,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
-                index: 3597055197,
-                value: 1.3414485,
             },
             TokenEmbedding {
                 index: 1534249892,
@@ -1214,10 +1036,6 @@ expression: embeddings
                 value: 1.0598006,
             },
             TokenEmbedding {
-                index: 3647363686,
-                value: 1.6192895,
-            },
-            TokenEmbedding {
                 index: 3465790596,
                 value: 1.0598006,
             },
@@ -1270,10 +1088,6 @@ expression: embeddings
                 value: 1.0598006,
             },
             TokenEmbedding {
-                index: 3647363686,
-                value: 1.6192895,
-            },
-            TokenEmbedding {
                 index: 4294589195,
                 value: 1.4304932,
             },
@@ -1284,14 +1098,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 602432240,
                 value: 1.0598006,
-            },
-            TokenEmbedding {
-                index: 4294589195,
-                value: 1.4304932,
-            },
-            TokenEmbedding {
-                index: 1803609070,
-                value: 1.4304932,
             },
             TokenEmbedding {
                 index: 1493643074,
@@ -1394,10 +1200,6 @@ expression: embeddings
                 value: 0.9885021,
             },
             TokenEmbedding {
-                index: 746694451,
-                value: 1.5619123,
-            },
-            TokenEmbedding {
                 index: 2001115021,
                 value: 0.9885021,
             },
@@ -1454,10 +1256,6 @@ expression: embeddings
                 value: 0.9885021,
             },
             TokenEmbedding {
-                index: 2198465861,
-                value: 1.3640916,
-            },
-            TokenEmbedding {
                 index: 4164085709,
                 value: 0.9885021,
             },
@@ -1484,14 +1282,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1206234184,
                 value: 0.9885021,
-            },
-            TokenEmbedding {
-                index: 482606066,
-                value: 1.3640916,
-            },
-            TokenEmbedding {
-                index: 556923514,
-                value: 1.5619123,
             },
             TokenEmbedding {
                 index: 1712290488,
@@ -1530,28 +1320,12 @@ expression: embeddings
                 value: 0.9885021,
             },
             TokenEmbedding {
-                index: 746694451,
-                value: 1.5619123,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.5619123,
-            },
-            TokenEmbedding {
                 index: 3162145734,
                 value: 0.9885021,
             },
             TokenEmbedding {
-                index: 4146099564,
-                value: 1.5619123,
-            },
-            TokenEmbedding {
                 index: 2217631463,
                 value: 0.9885021,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.3640916,
             },
             TokenEmbedding {
                 index: 1989327777,
@@ -1564,10 +1338,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 4216460842,
                 value: 1.3640916,
-            },
-            TokenEmbedding {
-                index: 556923514,
-                value: 1.5619123,
             },
             TokenEmbedding {
                 index: 3955284103,
@@ -1584,14 +1354,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1487363240,
                 value: 0.9885021,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3640916,
-            },
-            TokenEmbedding {
-                index: 4216460842,
-                value: 1.3640916,
             },
             TokenEmbedding {
                 index: 2022187410,
@@ -1674,10 +1436,6 @@ expression: embeddings
                 value: 1.0598006,
             },
             TokenEmbedding {
-                index: 2433396421,
-                value: 1.4304932,
-            },
-            TokenEmbedding {
                 index: 4111676266,
                 value: 1.0598006,
             },
@@ -1695,14 +1453,6 @@ expression: embeddings
             },
             TokenEmbedding {
                 index: 2735291143,
-                value: 1.4304932,
-            },
-            TokenEmbedding {
-                index: 746694451,
-                value: 1.4304932,
-            },
-            TokenEmbedding {
-                index: 271586828,
                 value: 1.4304932,
             },
             TokenEmbedding {
@@ -1766,10 +1516,6 @@ expression: embeddings
                 value: 1.0598006,
             },
             TokenEmbedding {
-                index: 3509090262,
-                value: 1.6192895,
-            },
-            TokenEmbedding {
                 index: 1865503964,
                 value: 1.0598006,
             },
@@ -1782,16 +1528,8 @@ expression: embeddings
                 value: 1.0598006,
             },
             TokenEmbedding {
-                index: 3219599024,
-                value: 1.4304932,
-            },
-            TokenEmbedding {
                 index: 2729346416,
                 value: 1.0598006,
-            },
-            TokenEmbedding {
-                index: 3509090262,
-                value: 1.6192895,
             },
             TokenEmbedding {
                 index: 2247696214,
@@ -1804,10 +1542,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2263788136,
                 value: 1.0598006,
-            },
-            TokenEmbedding {
-                index: 2735291143,
-                value: 1.4304932,
             },
             TokenEmbedding {
                 index: 3685119936,
@@ -1840,10 +1574,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 73437208,
                 value: 1.0598006,
-            },
-            TokenEmbedding {
-                index: 2801694572,
-                value: 1.4304932,
             },
             TokenEmbedding {
                 index: 556923514,
@@ -1902,20 +1632,8 @@ expression: embeddings
                 value: 1.5036904,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.6810429,
-            },
-            TokenEmbedding {
                 index: 4117215637,
                 value: 1.1421841,
-            },
-            TokenEmbedding {
-                index: 267694126,
-                value: 1.5036904,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.6810429,
             },
             TokenEmbedding {
                 index: 3083034654,
@@ -1932,10 +1650,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1115310631,
                 value: 1.1421841,
-            },
-            TokenEmbedding {
-                index: 4263639730,
-                value: 1.7863907,
             },
             TokenEmbedding {
                 index: 4263639730,
@@ -2022,20 +1736,8 @@ expression: embeddings
                 value: 1.1421841,
             },
             TokenEmbedding {
-                index: 4263639730,
-                value: 1.7863907,
-            },
-            TokenEmbedding {
-                index: 2729346416,
-                value: 1.5036904,
-            },
-            TokenEmbedding {
                 index: 366818093,
                 value: 1.1421841,
-            },
-            TokenEmbedding {
-                index: 4263639730,
-                value: 1.7863907,
             },
         ],
     ),
@@ -2102,10 +1804,6 @@ expression: embeddings
                 value: 1.0738838,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.7430441,
-            },
-            TokenEmbedding {
                 index: 746694451,
                 value: 1.0738838,
             },
@@ -2154,10 +1852,6 @@ expression: embeddings
                 value: 1.0738838,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.7430441,
-            },
-            TokenEmbedding {
                 index: 328159009,
                 value: 1.0738838,
             },
@@ -2180,10 +1874,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1032582097,
                 value: 1.0738838,
-            },
-            TokenEmbedding {
-                index: 1893674536,
-                value: 1.4432671,
             },
             TokenEmbedding {
                 index: 1712290488,
@@ -2234,16 +1924,8 @@ expression: embeddings
                 value: 1.0738838,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.7430441,
-            },
-            TokenEmbedding {
                 index: 3662991037,
                 value: 1.0738838,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.4432671,
             },
             TokenEmbedding {
                 index: 840092437,
@@ -2314,24 +1996,12 @@ expression: embeddings
                 value: 1.0883461,
             },
             TokenEmbedding {
-                index: 2519814717,
-                value: 1.6412132,
-            },
-            TokenEmbedding {
-                index: 482606066,
-                value: 1.456271,
-            },
-            TokenEmbedding {
                 index: 825009273,
                 value: 1.0883461,
             },
             TokenEmbedding {
                 index: 4095307911,
                 value: 1.6412132,
-            },
-            TokenEmbedding {
-                index: 2978480791,
-                value: 1.7524939,
             },
             TokenEmbedding {
                 index: 73437208,
@@ -2370,18 +2040,6 @@ expression: embeddings
                 value: 1.0883461,
             },
             TokenEmbedding {
-                index: 2978480791,
-                value: 1.7524939,
-            },
-            TokenEmbedding {
-                index: 73437208,
-                value: 1.456271,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.6412132,
-            },
-            TokenEmbedding {
                 index: 107042942,
                 value: 1.0883461,
             },
@@ -2394,24 +2052,12 @@ expression: embeddings
                 value: 1.0883461,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.6412132,
-            },
-            TokenEmbedding {
-                index: 2978480791,
-                value: 1.7524939,
-            },
-            TokenEmbedding {
                 index: 3797284334,
                 value: 1.0883461,
             },
             TokenEmbedding {
                 index: 3750031049,
                 value: 1.0883461,
-            },
-            TokenEmbedding {
-                index: 2519814717,
-                value: 1.6412132,
             },
             TokenEmbedding {
                 index: 279256016,
@@ -2442,18 +2088,6 @@ expression: embeddings
                 value: 1.0883461,
             },
             TokenEmbedding {
-                index: 1024073086,
-                value: 1.456271,
-            },
-            TokenEmbedding {
-                index: 450745843,
-                value: 1.456271,
-            },
-            TokenEmbedding {
-                index: 1366469460,
-                value: 1.456271,
-            },
-            TokenEmbedding {
                 index: 2254083639,
                 value: 1.0883461,
             },
@@ -2464,10 +2098,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2697866263,
                 value: 1.0883461,
-            },
-            TokenEmbedding {
-                index: 3213085933,
-                value: 1.456271,
             },
             TokenEmbedding {
                 index: 3405403236,
@@ -2542,20 +2172,12 @@ expression: embeddings
                 value: 1.126266,
             },
             TokenEmbedding {
-                index: 3797284334,
-                value: 1.4898299,
-            },
-            TokenEmbedding {
                 index: 354126075,
                 value: 1.126266,
             },
             TokenEmbedding {
                 index: 378152549,
                 value: 1.126266,
-            },
-            TokenEmbedding {
-                index: 2801694572,
-                value: 1.6694671,
             },
             TokenEmbedding {
                 index: 3938642969,
@@ -2568,18 +2190,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2811362361,
                 value: 1.126266,
-            },
-            TokenEmbedding {
-                index: 4044364892,
-                value: 1.6694671,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.4898299,
-            },
-            TokenEmbedding {
-                index: 107042942,
-                value: 1.4898299,
             },
             TokenEmbedding {
                 index: 271586828,
@@ -2614,10 +2224,6 @@ expression: embeddings
                 value: 1.126266,
             },
             TokenEmbedding {
-                index: 2801694572,
-                value: 1.6694671,
-            },
-            TokenEmbedding {
                 index: 3698218434,
                 value: 1.126266,
             },
@@ -2632,10 +2238,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3405403236,
                 value: 1.126266,
-            },
-            TokenEmbedding {
-                index: 4044364892,
-                value: 1.6694671,
             },
             TokenEmbedding {
                 index: 1607886074,
@@ -2738,10 +2340,6 @@ expression: embeddings
                 value: 1.0196837,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.7062426,
-            },
-            TokenEmbedding {
                 index: 2198465861,
                 value: 1.3934935,
             },
@@ -2786,10 +2384,6 @@ expression: embeddings
                 value: 1.0196837,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.7062426,
-            },
-            TokenEmbedding {
                 index: 2525557841,
                 value: 1.0196837,
             },
@@ -2804,10 +2398,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1160202800,
                 value: 1.0196837,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.3934935,
             },
             TokenEmbedding {
                 index: 3460537138,
@@ -2830,24 +2420,8 @@ expression: embeddings
                 value: 1.5874804,
             },
             TokenEmbedding {
-                index: 150648461,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
                 index: 3862165750,
                 value: 1.0196837,
-            },
-            TokenEmbedding {
-                index: 825923244,
-                value: 1.7062426,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.5874804,
-            },
-            TokenEmbedding {
-                index: 2198465861,
-                value: 1.3934935,
             },
             TokenEmbedding {
                 index: 823780080,
@@ -2870,36 +2444,12 @@ expression: embeddings
                 value: 1.0196837,
             },
             TokenEmbedding {
-                index: 2195988626,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
-                index: 107042942,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
                 index: 1366469460,
                 value: 1.0196837,
             },
             TokenEmbedding {
-                index: 1045432453,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
                 index: 2422101712,
                 value: 1.0196837,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.5874804,
             },
             TokenEmbedding {
                 index: 2801814275,
@@ -2970,20 +2520,12 @@ expression: embeddings
                 value: 1.0738838,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.6301776,
-            },
-            TokenEmbedding {
                 index: 2950163091,
                 value: 1.0738838,
             },
             TokenEmbedding {
                 index: 4164085709,
                 value: 1.0738838,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.6301776,
             },
             TokenEmbedding {
                 index: 617337943,
@@ -3016,10 +2558,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 556923514,
                 value: 1.0738838,
-            },
-            TokenEmbedding {
-                index: 2501400216,
-                value: 1.4432671,
             },
             TokenEmbedding {
                 index: 3948920979,
@@ -3066,20 +2604,12 @@ expression: embeddings
                 value: 1.0738838,
             },
             TokenEmbedding {
-                index: 1206234184,
-                value: 1.4432671,
-            },
-            TokenEmbedding {
                 index: 2198465861,
                 value: 1.0738838,
             },
             TokenEmbedding {
                 index: 2811362361,
                 value: 1.0738838,
-            },
-            TokenEmbedding {
-                index: 4044364892,
-                value: 1.4432671,
             },
             TokenEmbedding {
                 index: 3347085477,
@@ -3206,10 +2736,6 @@ expression: embeddings
                 value: 1.000743,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.57204,
-            },
-            TokenEmbedding {
                 index: 1989327777,
                 value: 1.000743,
             },
@@ -3224,14 +2750,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3955284103,
                 value: 1.6928395,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.8337494,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.57204,
             },
             TokenEmbedding {
                 index: 3083034654,
@@ -3250,10 +2768,6 @@ expression: embeddings
                 value: 1.3757023,
             },
             TokenEmbedding {
-                index: 1212244386,
-                value: 1.3757023,
-            },
-            TokenEmbedding {
                 index: 4132881170,
                 value: 1.000743,
             },
@@ -3264,10 +2778,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 791028728,
                 value: 1.3757023,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.6928395,
             },
             TokenEmbedding {
                 index: 2013061443,
@@ -3286,56 +2796,24 @@ expression: embeddings
                 value: 1.000743,
             },
             TokenEmbedding {
-                index: 3994366258,
-                value: 1.3757023,
-            },
-            TokenEmbedding {
                 index: 1500411046,
                 value: 1.000743,
-            },
-            TokenEmbedding {
-                index: 1487363240,
-                value: 1.3757023,
             },
             TokenEmbedding {
                 index: 1259543504,
                 value: 1.000743,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.8337494,
-            },
-            TokenEmbedding {
                 index: 90340186,
                 value: 1.000743,
-            },
-            TokenEmbedding {
-                index: 791028728,
-                value: 1.3757023,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.6928395,
             },
             TokenEmbedding {
                 index: 2211476128,
                 value: 1.000743,
             },
             TokenEmbedding {
-                index: 3696865584,
-                value: 1.3757023,
-            },
-            TokenEmbedding {
                 index: 2790606168,
                 value: 1.000743,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.6928395,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.8337494,
             },
             TokenEmbedding {
                 index: 4146099564,
@@ -3344,10 +2822,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 660413556,
                 value: 1.000743,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.8337494,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -3392,10 +2866,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 416239530,
                 value: 1.000743,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.8337494,
             },
             TokenEmbedding {
                 index: 194203390,
@@ -3454,10 +2924,6 @@ expression: embeddings
                 value: 1.0196837,
             },
             TokenEmbedding {
-                index: 3797284334,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
                 index: 1810548072,
                 value: 1.0196837,
             },
@@ -3498,20 +2964,12 @@ expression: embeddings
                 value: 1.0196837,
             },
             TokenEmbedding {
-                index: 4146099564,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
                 index: 72407213,
                 value: 1.0196837,
             },
             TokenEmbedding {
                 index: 1102985092,
                 value: 1.0196837,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.3934935,
             },
             TokenEmbedding {
                 index: 2001115021,
@@ -3524,10 +2982,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1680703421,
                 value: 1.0196837,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.3934935,
             },
             TokenEmbedding {
                 index: 2801694572,
@@ -3602,10 +3056,6 @@ expression: embeddings
                 value: 1.0196837,
             },
             TokenEmbedding {
-                index: 1146430651,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
                 index: 848416340,
                 value: 1.3934935,
             },
@@ -3650,16 +3100,8 @@ expression: embeddings
                 value: 1.0196837,
             },
             TokenEmbedding {
-                index: 2978480791,
-                value: 1.3934935,
-            },
-            TokenEmbedding {
                 index: 788504372,
                 value: 1.0196837,
-            },
-            TokenEmbedding {
-                index: 848416340,
-                value: 1.3934935,
             },
             TokenEmbedding {
                 index: 2811362361,
@@ -3672,10 +3114,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2263788136,
                 value: 1.0196837,
-            },
-            TokenEmbedding {
-                index: 2735291143,
-                value: 1.3934935,
             },
         ],
     ),
@@ -3720,10 +3158,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2425206056,
                 value: 1.0528967,
-            },
-            TokenEmbedding {
-                index: 3091434593,
-                value: 1.4241908,
             },
             TokenEmbedding {
                 index: 2501400216,
@@ -3782,16 +3216,8 @@ expression: embeddings
                 value: 1.0528967,
             },
             TokenEmbedding {
-                index: 2606984291,
-                value: 1.8063959,
-            },
-            TokenEmbedding {
                 index: 1032582097,
                 value: 1.0528967,
-            },
-            TokenEmbedding {
-                index: 1893674536,
-                value: 1.729059,
             },
             TokenEmbedding {
                 index: 3776700327,
@@ -3822,10 +3248,6 @@ expression: embeddings
                 value: 1.4241908,
             },
             TokenEmbedding {
-                index: 2606984291,
-                value: 1.8063959,
-            },
-            TokenEmbedding {
                 index: 2422101712,
                 value: 1.0528967,
             },
@@ -3838,24 +3260,8 @@ expression: embeddings
                 value: 1.0528967,
             },
             TokenEmbedding {
-                index: 2606984291,
-                value: 1.8063959,
-            },
-            TokenEmbedding {
-                index: 1893674536,
-                value: 1.729059,
-            },
-            TokenEmbedding {
-                index: 2604353060,
-                value: 1.4241908,
-            },
-            TokenEmbedding {
                 index: 64441931,
                 value: 1.0528967,
-            },
-            TokenEmbedding {
-                index: 770642290,
-                value: 1.4241908,
             },
             TokenEmbedding {
                 index: 4216460842,
@@ -3866,28 +3272,12 @@ expression: embeddings
                 value: 1.0528967,
             },
             TokenEmbedding {
-                index: 2606984291,
-                value: 1.8063959,
-            },
-            TokenEmbedding {
                 index: 1259543504,
                 value: 1.0528967,
             },
             TokenEmbedding {
                 index: 2539441932,
                 value: 1.0528967,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.4241908,
-            },
-            TokenEmbedding {
-                index: 1893674536,
-                value: 1.729059,
-            },
-            TokenEmbedding {
-                index: 4216460842,
-                value: 1.6138997,
             },
             TokenEmbedding {
                 index: 2236181424,
@@ -3904,10 +3294,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1805720113,
                 value: 1.0528967,
-            },
-            TokenEmbedding {
-                index: 4216460842,
-                value: 1.6138997,
             },
             TokenEmbedding {
                 index: 1366469460,
@@ -4006,14 +3392,6 @@ expression: embeddings
                 value: 1.0528967,
             },
             TokenEmbedding {
-                index: 4211315767,
-                value: 1.6138997,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6138997,
-            },
-            TokenEmbedding {
                 index: 482606066,
                 value: 1.6138997,
             },
@@ -4026,20 +3404,8 @@ expression: embeddings
                 value: 1.0528967,
             },
             TokenEmbedding {
-                index: 2418291178,
-                value: 1.6138997,
-            },
-            TokenEmbedding {
-                index: 4211315767,
-                value: 1.6138997,
-            },
-            TokenEmbedding {
                 index: 2965595575,
                 value: 1.0528967,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6138997,
             },
             TokenEmbedding {
                 index: 2409636210,
@@ -4048,14 +3414,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 412886019,
                 value: 1.0528967,
-            },
-            TokenEmbedding {
-                index: 482606066,
-                value: 1.6138997,
-            },
-            TokenEmbedding {
-                index: 3651140589,
-                value: 1.729059,
             },
             TokenEmbedding {
                 index: 68622081,
@@ -4078,16 +3436,8 @@ expression: embeddings
                 value: 1.4241908,
             },
             TokenEmbedding {
-                index: 3651140589,
-                value: 1.729059,
-            },
-            TokenEmbedding {
                 index: 1282067105,
                 value: 1.0528967,
-            },
-            TokenEmbedding {
-                index: 2573511939,
-                value: 1.4241908,
             },
             TokenEmbedding {
                 index: 531594929,
@@ -4098,22 +3448,6 @@ expression: embeddings
                 value: 1.0528967,
             },
             TokenEmbedding {
-                index: 783123143,
-                value: 1.4241908,
-            },
-            TokenEmbedding {
-                index: 3651140589,
-                value: 1.729059,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.6138997,
-            },
-            TokenEmbedding {
-                index: 482606066,
-                value: 1.6138997,
-            },
-            TokenEmbedding {
                 index: 1259543504,
                 value: 1.0528967,
             },
@@ -4122,20 +3456,12 @@ expression: embeddings
                 value: 1.0528967,
             },
             TokenEmbedding {
-                index: 2418291178,
-                value: 1.6138997,
-            },
-            TokenEmbedding {
                 index: 3252996580,
                 value: 1.0528967,
             },
             TokenEmbedding {
                 index: 779560844,
                 value: 1.0528967,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.6138997,
             },
             TokenEmbedding {
                 index: 2801814275,
@@ -4214,10 +3540,6 @@ expression: embeddings
                 value: 0.9003937,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.4853573,
-            },
-            TokenEmbedding {
                 index: 2978480791,
                 value: 0.9003937,
             },
@@ -4228,10 +3550,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1579553557,
                 value: 0.9003937,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.4853573,
             },
             TokenEmbedding {
                 index: 2001115021,
@@ -4278,24 +3596,12 @@ expression: embeddings
                 value: 0.9003937,
             },
             TokenEmbedding {
-                index: 150648461,
-                value: 1.4853573,
-            },
-            TokenEmbedding {
                 index: 107042942,
                 value: 0.9003937,
             },
             TokenEmbedding {
-                index: 2001115021,
-                value: 1.6166439,
-            },
-            TokenEmbedding {
                 index: 3909239139,
                 value: 0.9003937,
-            },
-            TokenEmbedding {
-                index: 2198465861,
-                value: 1.6166439,
             },
             TokenEmbedding {
                 index: 482606066,
@@ -4304,14 +3610,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1259543504,
                 value: 0.9003937,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.4853573,
-            },
-            TokenEmbedding {
-                index: 1453371039,
-                value: 1.2778159,
             },
             TokenEmbedding {
                 index: 1815803383,
@@ -4330,10 +3628,6 @@ expression: embeddings
                 value: 0.9003937,
             },
             TokenEmbedding {
-                index: 2198465861,
-                value: 1.6166439,
-            },
-            TokenEmbedding {
                 index: 2544814395,
                 value: 0.9003937,
             },
@@ -4342,36 +3636,8 @@ expression: embeddings
                 value: 1.2778159,
             },
             TokenEmbedding {
-                index: 1487363240,
-                value: 1.2778159,
-            },
-            TokenEmbedding {
-                index: 150648461,
-                value: 1.4853573,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.6166439,
-            },
-            TokenEmbedding {
-                index: 2068313302,
-                value: 1.4853573,
-            },
-            TokenEmbedding {
                 index: 4240032648,
                 value: 0.9003937,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.6166439,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.2778159,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.6166439,
             },
             TokenEmbedding {
                 index: 2950163091,
@@ -4382,16 +3648,8 @@ expression: embeddings
                 value: 0.9003937,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.6166439,
-            },
-            TokenEmbedding {
                 index: 3470976773,
                 value: 0.9003937,
-            },
-            TokenEmbedding {
-                index: 2068313302,
-                value: 1.4853573,
             },
             TokenEmbedding {
                 index: 3797284334,
@@ -4400,10 +3658,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2223049101,
                 value: 0.9003937,
-            },
-            TokenEmbedding {
-                index: 2198465861,
-                value: 1.6166439,
             },
             TokenEmbedding {
                 index: 279256016,
@@ -4434,16 +3688,8 @@ expression: embeddings
                 value: 0.9003937,
             },
             TokenEmbedding {
-                index: 3994366258,
-                value: 1.2778159,
-            },
-            TokenEmbedding {
                 index: 1553184556,
                 value: 0.9003937,
-            },
-            TokenEmbedding {
-                index: 3009317781,
-                value: 1.2778159,
             },
             TokenEmbedding {
                 index: 2220834348,
@@ -4454,16 +3700,8 @@ expression: embeddings
                 value: 0.9003937,
             },
             TokenEmbedding {
-                index: 90340186,
-                value: 1.4853573,
-            },
-            TokenEmbedding {
                 index: 2367492922,
                 value: 0.9003937,
-            },
-            TokenEmbedding {
-                index: 556923514,
-                value: 1.2778159,
             },
             TokenEmbedding {
                 index: 128247603,
@@ -4480,10 +3718,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1680703421,
                 value: 0.9003937,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.6166439,
             },
             TokenEmbedding {
                 index: 2428567828,
@@ -4578,14 +3812,6 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 3696865584,
-                value: 1.5371546,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.747794,
-            },
-            TokenEmbedding {
                 index: 4146099564,
                 value: 1.3359048,
             },
@@ -4606,14 +3832,6 @@ expression: embeddings
                 value: 1.6623698,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.747794,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 300763427,
                 value: 0.9591708,
             },
@@ -4624,10 +3842,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2941776156,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 1487363240,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 1712290488,
@@ -4650,24 +3864,12 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.747794,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.5371546,
-            },
-            TokenEmbedding {
                 index: 3083034654,
                 value: 0.9591708,
             },
             TokenEmbedding {
                 index: 791028728,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.6623698,
             },
             TokenEmbedding {
                 index: 4216460842,
@@ -4682,24 +3884,8 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 3696865584,
-                value: 1.5371546,
-            },
-            TokenEmbedding {
                 index: 2790606168,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.747794,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.5371546,
             },
             TokenEmbedding {
                 index: 1200123249,
@@ -4708,10 +3894,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2409036393,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 2801814275,
@@ -4730,24 +3912,8 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 2415903931,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 4216460842,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 2198465861,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
-                index: 4064718699,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 2409636210,
@@ -4858,16 +4024,8 @@ expression: embeddings
                 value: 1.4829949,
             },
             TokenEmbedding {
-                index: 1366469460,
-                value: 1.7717043,
-            },
-            TokenEmbedding {
                 index: 2254083639,
                 value: 1.1184721,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.4829949,
             },
             TokenEmbedding {
                 index: 150648461,
@@ -4882,36 +4040,12 @@ expression: embeddings
                 value: 1.4829949,
             },
             TokenEmbedding {
-                index: 2978480791,
-                value: 1.6637388,
-            },
-            TokenEmbedding {
                 index: 3146544980,
                 value: 1.1184721,
             },
             TokenEmbedding {
                 index: 2198465861,
                 value: 1.1184721,
-            },
-            TokenEmbedding {
-                index: 2284717444,
-                value: 1.4829949,
-            },
-            TokenEmbedding {
-                index: 2978480791,
-                value: 1.6637388,
-            },
-            TokenEmbedding {
-                index: 73437208,
-                value: 1.6637388,
-            },
-            TokenEmbedding {
-                index: 2136006594,
-                value: 1.4829949,
-            },
-            TokenEmbedding {
-                index: 1366469460,
-                value: 1.7717043,
             },
             TokenEmbedding {
                 index: 214262285,
@@ -4926,28 +4060,8 @@ expression: embeddings
                 value: 1.1184721,
             },
             TokenEmbedding {
-                index: 3213085933,
-                value: 1.4829949,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.4829949,
-            },
-            TokenEmbedding {
-                index: 107042942,
-                value: 1.4829949,
-            },
-            TokenEmbedding {
                 index: 90340186,
                 value: 1.1184721,
-            },
-            TokenEmbedding {
-                index: 1366469460,
-                value: 1.7717043,
-            },
-            TokenEmbedding {
-                index: 73437208,
-                value: 1.6637388,
             },
             TokenEmbedding {
                 index: 2422101712,
@@ -5026,10 +4140,6 @@ expression: embeddings
                 value: 0.99458474,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7707725,
-            },
-            TokenEmbedding {
                 index: 157101613,
                 value: 0.99458474,
             },
@@ -5058,40 +4168,12 @@ expression: embeddings
                 value: 0.99458474,
             },
             TokenEmbedding {
-                index: 3948920979,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
-                index: 1583594003,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7707725,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.5669597,
-            },
-            TokenEmbedding {
                 index: 3083034654,
                 value: 0.99458474,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7707725,
-            },
-            TokenEmbedding {
                 index: 1552462250,
                 value: 0.99458474,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.3698722,
             },
             TokenEmbedding {
                 index: 2801814275,
@@ -5174,40 +4256,16 @@ expression: embeddings
                 value: 0.99458474,
             },
             TokenEmbedding {
-                index: 660413556,
-                value: 1.5669597,
-            },
-            TokenEmbedding {
                 index: 916720710,
                 value: 0.99458474,
-            },
-            TokenEmbedding {
-                index: 1815803383,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7707725,
             },
             TokenEmbedding {
                 index: 1555982965,
                 value: 0.99458474,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.5669597,
-            },
-            TokenEmbedding {
                 index: 3358882757,
                 value: 0.99458474,
-            },
-            TokenEmbedding {
-                index: 3616169655,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.3698722,
             },
             TokenEmbedding {
                 index: 482606066,
@@ -5230,10 +4288,6 @@ expression: embeddings
                 value: 0.99458474,
             },
             TokenEmbedding {
-                index: 482606066,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
                 index: 1366469460,
                 value: 0.99458474,
             },
@@ -5252,10 +4306,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 196978577,
                 value: 0.99458474,
-            },
-            TokenEmbedding {
-                index: 660413556,
-                value: 1.5669597,
             },
         ],
     ),
@@ -5322,10 +4372,6 @@ expression: embeddings
                 value: 0.97655684,
             },
             TokenEmbedding {
-                index: 482606066,
-                value: 1.551914,
-            },
-            TokenEmbedding {
                 index: 1712290488,
                 value: 0.97655684,
             },
@@ -5358,14 +4404,6 @@ expression: embeddings
                 value: 0.97655684,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.551914,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6752927,
-            },
-            TokenEmbedding {
                 index: 4152429924,
                 value: 0.97655684,
             },
@@ -5378,16 +4416,8 @@ expression: embeddings
                 value: 0.97655684,
             },
             TokenEmbedding {
-                index: 1151211222,
-                value: 1.6752927,
-            },
-            TokenEmbedding {
                 index: 107042942,
                 value: 0.97655684,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.3526753,
             },
             TokenEmbedding {
                 index: 660413556,
@@ -5396,10 +4426,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 150648461,
                 value: 0.97655684,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.3526753,
             },
             TokenEmbedding {
                 index: 2001115021,
@@ -5414,16 +4440,8 @@ expression: embeddings
                 value: 1.3526753,
             },
             TokenEmbedding {
-                index: 482606066,
-                value: 1.551914,
-            },
-            TokenEmbedding {
                 index: 2646367888,
                 value: 1.551914,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3526753,
             },
             TokenEmbedding {
                 index: 1453371039,
@@ -5434,20 +4452,12 @@ expression: embeddings
                 value: 0.97655684,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.551914,
-            },
-            TokenEmbedding {
                 index: 1319118361,
                 value: 1.3526753,
             },
             TokenEmbedding {
                 index: 2335850622,
                 value: 0.97655684,
-            },
-            TokenEmbedding {
-                index: 2198465861,
-                value: 1.3526753,
             },
             TokenEmbedding {
                 index: 1553184556,
@@ -5460,14 +4470,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3955284103,
                 value: 0.97655684,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.551914,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.3526753,
             },
             TokenEmbedding {
                 index: 1200123249,
@@ -5498,10 +4500,6 @@ expression: embeddings
                 value: 1.3526753,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.551914,
-            },
-            TokenEmbedding {
                 index: 2978480791,
                 value: 0.97655684,
             },
@@ -5514,20 +4512,12 @@ expression: embeddings
                 value: 0.97655684,
             },
             TokenEmbedding {
-                index: 4090989054,
-                value: 1.3526753,
-            },
-            TokenEmbedding {
                 index: 1981553879,
                 value: 0.97655684,
             },
             TokenEmbedding {
                 index: 2657907827,
                 value: 0.97655684,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6752927,
             },
             TokenEmbedding {
                 index: 2815504874,
@@ -5594,20 +4584,8 @@ expression: embeddings
                 value: 1.1840204,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.8114167,
-            },
-            TokenEmbedding {
-                index: 2068313302,
-                value: 1.5394971,
-            },
-            TokenEmbedding {
                 index: 3797284334,
                 value: 1.1840204,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8114167,
             },
             TokenEmbedding {
                 index: 2001115021,
@@ -5620,10 +4598,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1680703421,
                 value: 1.1840204,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.5394971,
             },
             TokenEmbedding {
                 index: 2333965122,
@@ -5640,10 +4614,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2223049101,
                 value: 1.1840204,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8114167,
             },
             TokenEmbedding {
                 index: 3852100882,
@@ -5766,10 +4736,6 @@ expression: embeddings
                 value: 1.862958,
             },
             TokenEmbedding {
-                index: 107042942,
-                value: 1.3470386,
-            },
-            TokenEmbedding {
                 index: 1319118361,
                 value: 1.5469629,
             },
@@ -5782,24 +4748,12 @@ expression: embeddings
                 value: 0.9706919,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.862958,
-            },
-            TokenEmbedding {
                 index: 4095307911,
                 value: 1.3470386,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.5469629,
-            },
-            TokenEmbedding {
                 index: 2858395313,
                 value: 0.9706919,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.862958,
             },
             TokenEmbedding {
                 index: 2163466090,
@@ -5808,10 +4762,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1552462250,
                 value: 0.9706919,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.862958,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -5826,36 +4776,8 @@ expression: embeddings
                 value: 0.9706919,
             },
             TokenEmbedding {
-                index: 3948920979,
-                value: 1.3470386,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.862958,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.862958,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.3470386,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.5469629,
-            },
-            TokenEmbedding {
                 index: 300763427,
                 value: 0.9706919,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.862958,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.3470386,
             },
             TokenEmbedding {
                 index: 183901823,
@@ -5886,16 +4808,8 @@ expression: embeddings
                 value: 0.9706919,
             },
             TokenEmbedding {
-                index: 323367964,
-                value: 1.3470386,
-            },
-            TokenEmbedding {
                 index: 2729346416,
                 value: 0.9706919,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.3470386,
             },
             TokenEmbedding {
                 index: 3020303224,
@@ -5964,10 +4878,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3662991037,
                 value: 0.9706919,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3470386,
             },
             TokenEmbedding {
                 index: 729520219,
@@ -6054,10 +4964,6 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.7515821,
-            },
-            TokenEmbedding {
                 index: 2978480791,
                 value: 0.96489686,
             },
@@ -6068,10 +4974,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1579553557,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7515821,
             },
             TokenEmbedding {
                 index: 2001115021,
@@ -6110,24 +5012,12 @@ expression: embeddings
                 value: 1.3414485,
             },
             TokenEmbedding {
-                index: 150648461,
-                value: 1.5420431,
-            },
-            TokenEmbedding {
                 index: 107042942,
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 2001115021,
-                value: 1.5420431,
-            },
-            TokenEmbedding {
                 index: 3909239139,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 2198465861,
-                value: 1.6666552,
             },
             TokenEmbedding {
                 index: 482606066,
@@ -6136,10 +5026,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1259543504,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.5420431,
             },
             TokenEmbedding {
                 index: 1815803383,
@@ -6158,28 +5044,12 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 2198465861,
-                value: 1.6666552,
-            },
-            TokenEmbedding {
                 index: 2544814395,
                 value: 0.96489686,
             },
             TokenEmbedding {
                 index: 1487363240,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 150648461,
-                value: 1.5420431,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7515821,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.5420431,
             },
             TokenEmbedding {
                 index: 3500588801,
@@ -6194,24 +5064,8 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.7515821,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.5420431,
-            },
-            TokenEmbedding {
                 index: 98957356,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 2198465861,
-                value: 1.6666552,
-            },
-            TokenEmbedding {
-                index: 3994366258,
-                value: 1.3414485,
             },
             TokenEmbedding {
                 index: 2184308305,
@@ -6226,10 +5080,6 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 90340186,
-                value: 1.5420431,
-            },
-            TokenEmbedding {
                 index: 2367492922,
                 value: 0.96489686,
             },
@@ -6242,10 +5092,6 @@ expression: embeddings
                 value: 0.96489686,
             },
             TokenEmbedding {
-                index: 1834151639,
-                value: 1.3414485,
-            },
-            TokenEmbedding {
                 index: 2752514965,
                 value: 0.96489686,
             },
@@ -6256,10 +5102,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1680703421,
                 value: 0.96489686,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.5420431,
             },
             TokenEmbedding {
                 index: 2801694572,
@@ -6382,14 +5224,6 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 2418291178,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6538645,
-            },
-            TokenEmbedding {
                 index: 4152429924,
                 value: 0.94791996,
             },
@@ -6398,36 +5232,16 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 150648461,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6538645,
-            },
-            TokenEmbedding {
                 index: 1259543504,
                 value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.5274698,
             },
             TokenEmbedding {
                 index: 916720710,
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 2198465861,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
                 index: 482606066,
                 value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7402664,
             },
             TokenEmbedding {
                 index: 1319118361,
@@ -6438,22 +5252,6 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 4090989054,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 3750724055,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7402664,
-            },
-            TokenEmbedding {
-                index: 107042942,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
                 index: 90340186,
                 value: 1.5274698,
             },
@@ -6462,15 +5260,7 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 150648461,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
                 index: 2646367888,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 1319118361,
                 value: 1.3249536,
             },
             TokenEmbedding {
@@ -6494,26 +5284,6 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 2198465861,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
-                index: 482606066,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 1259543504,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7402664,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
                 index: 2729346416,
                 value: 0.94791996,
             },
@@ -6526,28 +5296,8 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 1151211222,
-                value: 1.6538645,
-            },
-            TokenEmbedding {
-                index: 3955284103,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7402664,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
                 index: 3162145734,
                 value: 0.94791996,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.3249536,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -6560,10 +5310,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1626059996,
                 value: 0.94791996,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.5274698,
             },
             TokenEmbedding {
                 index: 1487363240,
@@ -6618,10 +5364,6 @@ expression: embeddings
                 value: 1.3359048,
             },
             TokenEmbedding {
-                index: 2256415907,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 2501400216,
                 value: 1.3359048,
             },
@@ -6660,10 +5402,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1201988633,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 2425206056,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 2068313302,
@@ -6706,20 +5444,12 @@ expression: embeddings
                 value: 1.5371546,
             },
             TokenEmbedding {
-                index: 2501400216,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 2418291178,
                 value: 0.9591708,
             },
             TokenEmbedding {
                 index: 2646367888,
                 value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.5371546,
             },
             TokenEmbedding {
                 index: 1319118361,
@@ -6738,10 +5468,6 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 4064718699,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
                 index: 1664714971,
                 value: 0.9591708,
             },
@@ -6750,32 +5476,12 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.5371546,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 1609172354,
                 value: 1.3359048,
             },
             TokenEmbedding {
                 index: 3136187421,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 4064718699,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
-                index: 3696865584,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 1560199152,
@@ -6798,10 +5504,6 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 4064718699,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
                 index: 2409636210,
                 value: 0.9591708,
             },
@@ -6814,24 +5516,12 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 1360772803,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 1289629280,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 2198465861,
                 value: 0.9591708,
             },
             TokenEmbedding {
                 index: 446310219,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 1609172354,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 2191748745,
@@ -6880,10 +5570,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2161703837,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 3943323503,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 575524991,
@@ -6950,24 +5636,12 @@ expression: embeddings
                 value: 0.91053855,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.7798988,
-            },
-            TokenEmbedding {
                 index: 2001115021,
                 value: 1.4945138,
             },
             TokenEmbedding {
                 index: 1579553557,
                 value: 0.91053855,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7798988,
-            },
-            TokenEmbedding {
-                index: 2068313302,
-                value: 1.6247697,
             },
             TokenEmbedding {
                 index: 1162398597,
@@ -7002,68 +5676,20 @@ expression: embeddings
                 value: 0.91053855,
             },
             TokenEmbedding {
-                index: 150648461,
-                value: 1.4945138,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7798988,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.4945138,
-            },
-            TokenEmbedding {
                 index: 3909239139,
                 value: 0.91053855,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7798988,
-            },
-            TokenEmbedding {
-                index: 2068313302,
-                value: 1.6247697,
             },
             TokenEmbedding {
                 index: 1368687930,
                 value: 0.91053855,
             },
             TokenEmbedding {
-                index: 2198465861,
-                value: 1.4945138,
-            },
-            TokenEmbedding {
-                index: 1487363240,
-                value: 1.4945138,
-            },
-            TokenEmbedding {
                 index: 1259543504,
                 value: 0.91053855,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.7798988,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.4945138,
-            },
-            TokenEmbedding {
-                index: 150648461,
-                value: 1.4945138,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7798988,
-            },
-            TokenEmbedding {
                 index: 3470976773,
                 value: 1.2879988,
-            },
-            TokenEmbedding {
-                index: 2068313302,
-                value: 1.6247697,
             },
             TokenEmbedding {
                 index: 3797284334,
@@ -7082,28 +5708,8 @@ expression: embeddings
                 value: 0.91053855,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7798988,
-            },
-            TokenEmbedding {
-                index: 3470976773,
-                value: 1.2879988,
-            },
-            TokenEmbedding {
                 index: 1713164866,
                 value: 0.91053855,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7798988,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7798988,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.2879988,
             },
             TokenEmbedding {
                 index: 617337943,
@@ -7118,20 +5724,12 @@ expression: embeddings
                 value: 0.91053855,
             },
             TokenEmbedding {
-                index: 2198465861,
-                value: 1.4945138,
-            },
-            TokenEmbedding {
                 index: 2752514965,
                 value: 0.91053855,
             },
             TokenEmbedding {
                 index: 3188255487,
                 value: 0.91053855,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7798988,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -7150,20 +5748,8 @@ expression: embeddings
                 value: 0.91053855,
             },
             TokenEmbedding {
-                index: 3009317781,
-                value: 1.2879988,
-            },
-            TokenEmbedding {
-                index: 1487363240,
-                value: 1.4945138,
-            },
-            TokenEmbedding {
                 index: 2544814395,
                 value: 0.91053855,
-            },
-            TokenEmbedding {
-                index: 3994366258,
-                value: 1.2879988,
             },
             TokenEmbedding {
                 index: 2184308305,
@@ -7178,20 +5764,12 @@ expression: embeddings
                 value: 0.91053855,
             },
             TokenEmbedding {
-                index: 90340186,
-                value: 1.4945138,
-            },
-            TokenEmbedding {
                 index: 2367492922,
                 value: 0.91053855,
             },
             TokenEmbedding {
                 index: 1553184556,
                 value: 0.91053855,
-            },
-            TokenEmbedding {
-                index: 2657907827,
-                value: 1.2879988,
             },
             TokenEmbedding {
                 index: 984914924,
@@ -7204,10 +5782,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1680703421,
                 value: 0.91053855,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.4945138,
             },
             TokenEmbedding {
                 index: 4211315767,
@@ -7266,10 +5840,6 @@ expression: embeddings
                 value: 1.8447325,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.8447325,
-            },
-            TokenEmbedding {
                 index: 4095307911,
                 value: 1.5179064,
             },
@@ -7290,20 +5860,8 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
                 index: 2858395313,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8447325,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.5179064,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -7312,14 +5870,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2752514965,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.5179064,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.3141804,
             },
             TokenEmbedding {
                 index: 3682098724,
@@ -7334,48 +5884,12 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 3948920979,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8447325,
-            },
-            TokenEmbedding {
-                index: 107042942,
-                value: 1.5179064,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
                 index: 1741320623,
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.8447325,
-            },
-            TokenEmbedding {
-                index: 2501400216,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
                 index: 1552462250,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8447325,
-            },
-            TokenEmbedding {
-                index: 107042942,
-                value: 1.5179064,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7328035,
             },
             TokenEmbedding {
                 index: 3083034654,
@@ -7398,10 +5912,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 323367964,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
                 index: 2729346416,
                 value: 0.93692994,
             },
@@ -7420,14 +5930,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1093033191,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8447325,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7328035,
             },
             TokenEmbedding {
                 index: 2801694572,
@@ -7452,10 +5954,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2409636210,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 101144376,
-                value: 1.3141804,
             },
             TokenEmbedding {
                 index: 412886019,
@@ -7502,10 +6000,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 90340186,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
                 index: 729520219,
                 value: 0.93692994,
             },
@@ -7520,10 +6014,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1238943883,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2284717444,
-                value: 1.3141804,
             },
             TokenEmbedding {
                 index: 3252996580,
@@ -7622,10 +6112,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
                 index: 2068313302,
                 value: 1.3141804,
             },
@@ -7674,14 +6160,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2198465861,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
-                index: 482606066,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
                 index: 3753032443,
                 value: 0.93692994,
             },
@@ -7698,10 +6176,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
                 index: 1319118361,
                 value: 0.93692994,
             },
@@ -7714,16 +6188,8 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
                 index: 3470976773,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2068313302,
-                value: 1.3141804,
             },
             TokenEmbedding {
                 index: 3797284334,
@@ -7736,10 +6202,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3188255487,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7328035,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -7756,10 +6218,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1936941383,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 4164085709,
-                value: 1.3141804,
             },
             TokenEmbedding {
                 index: 1803609070,
@@ -7814,32 +6272,12 @@ expression: embeddings
                 value: 1.3141804,
             },
             TokenEmbedding {
-                index: 2751532746,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
-                index: 2697773614,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
                 index: 1259543504,
                 value: 0.93692994,
             },
             TokenEmbedding {
                 index: 3662991037,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
-                index: 1511485464,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.3141804,
             },
             TokenEmbedding {
                 index: 2422101712,
@@ -7934,10 +6372,6 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 3202230258,
-                value: 1.6329775,
-            },
-            TokenEmbedding {
                 index: 3842261875,
                 value: 1.2983452,
             },
@@ -7962,14 +6396,6 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 3202230258,
-                value: 1.6329775,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6329775,
-            },
-            TokenEmbedding {
                 index: 2211476128,
                 value: 0.92091465,
             },
@@ -7978,24 +6404,8 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 1151211222,
-                value: 1.6329775,
-            },
-            TokenEmbedding {
                 index: 1259543504,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
-                index: 660413556,
-                value: 1.2983452,
             },
             TokenEmbedding {
                 index: 3651959283,
@@ -8014,10 +6424,6 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7864565,
-            },
-            TokenEmbedding {
                 index: 2001115021,
                 value: 0.92091465,
             },
@@ -8034,28 +6440,12 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7864565,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
                 index: 300763427,
                 value: 0.92091465,
             },
             TokenEmbedding {
                 index: 1936941383,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7864565,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.5037837,
             },
             TokenEmbedding {
                 index: 1487363240,
@@ -8066,24 +6456,12 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7864565,
-            },
-            TokenEmbedding {
                 index: 1319118361,
                 value: 1.2983452,
             },
             TokenEmbedding {
                 index: 3118104129,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7864565,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.2983452,
             },
             TokenEmbedding {
                 index: 341994194,
@@ -8094,20 +6472,12 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 3842261875,
-                value: 1.2983452,
-            },
-            TokenEmbedding {
                 index: 791028728,
                 value: 0.92091465,
             },
             TokenEmbedding {
                 index: 3955284103,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 1487363240,
-                value: 1.2983452,
             },
             TokenEmbedding {
                 index: 4216460842,
@@ -8118,32 +6488,16 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 3202230258,
-                value: 1.6329775,
-            },
-            TokenEmbedding {
                 index: 4051264454,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6329775,
             },
             TokenEmbedding {
                 index: 2729346416,
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
                 index: 107042942,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.5037837,
             },
             TokenEmbedding {
                 index: 3672961552,
@@ -8226,10 +6580,6 @@ expression: embeddings
                 value: 1.0598006,
             },
             TokenEmbedding {
-                index: 3981360195,
-                value: 1.4304932,
-            },
-            TokenEmbedding {
                 index: 300763427,
                 value: 1.0598006,
             },
@@ -8258,10 +6608,6 @@ expression: embeddings
                 value: 1.4304932,
             },
             TokenEmbedding {
-                index: 3943323503,
-                value: 1.4304932,
-            },
-            TokenEmbedding {
                 index: 2665657093,
                 value: 1.0598006,
             },
@@ -8272,10 +6618,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1151211222,
                 value: 1.0598006,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.4304932,
             },
             TokenEmbedding {
                 index: 4146099564,
@@ -8302,10 +6644,6 @@ expression: embeddings
                 value: 1.0598006,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.6192895,
-            },
-            TokenEmbedding {
                 index: 107042942,
                 value: 1.0598006,
             },
@@ -8330,10 +6668,6 @@ expression: embeddings
                 value: 1.0598006,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.6192895,
-            },
-            TokenEmbedding {
                 index: 3414685487,
                 value: 1.0598006,
             },
@@ -8350,10 +6684,6 @@ expression: embeddings
                 value: 1.0598006,
             },
             TokenEmbedding {
-                index: 1200123249,
-                value: 1.4304932,
-            },
-            TokenEmbedding {
                 index: 3720994354,
                 value: 1.0598006,
             },
@@ -8364,10 +6694,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2220834348,
                 value: 1.0598006,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.4304932,
             },
             TokenEmbedding {
                 index: 1511485464,
@@ -8474,10 +6800,6 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.5371546,
-            },
-            TokenEmbedding {
                 index: 157101613,
                 value: 1.3359048,
             },
@@ -8486,24 +6808,12 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.5371546,
-            },
-            TokenEmbedding {
                 index: 1555982965,
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 157101613,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 3040611874,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 4153495051,
-                value: 1.5371546,
             },
             TokenEmbedding {
                 index: 2409636210,
@@ -8558,10 +6868,6 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 4146099564,
                 value: 0.9591708,
             },
@@ -8574,24 +6880,8 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 683557595,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 3854727812,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 1413196111,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 2284717444,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 4153495051,
-                value: 1.5371546,
             },
             TokenEmbedding {
                 index: 3397782350,
@@ -8620,10 +6910,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 91289659,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 3358882757,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 536401325,
@@ -8676,14 +6962,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 82715077,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 1553184556,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 1065245734,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 1534249892,
@@ -8762,24 +7040,12 @@ expression: embeddings
                 value: 0.94239295,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.6496445,
-            },
-            TokenEmbedding {
                 index: 2001115021,
                 value: 1.5226731,
             },
             TokenEmbedding {
                 index: 4164085709,
                 value: 0.94239295,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.6496445,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.5226731,
             },
             TokenEmbedding {
                 index: 3909239139,
@@ -8822,20 +7088,8 @@ expression: embeddings
                 value: 0.94239295,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.6496445,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.319545,
-            },
-            TokenEmbedding {
                 index: 1012170774,
                 value: 0.94239295,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8477453,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -8846,14 +7100,6 @@ expression: embeddings
                 value: 0.94239295,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.8477453,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.319545,
-            },
-            TokenEmbedding {
                 index: 918731268,
                 value: 0.94239295,
             },
@@ -8862,44 +7108,16 @@ expression: embeddings
                 value: 0.94239295,
             },
             TokenEmbedding {
-                index: 150648461,
-                value: 1.319545,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8477453,
-            },
-            TokenEmbedding {
                 index: 3470976773,
                 value: 1.5226731,
-            },
-            TokenEmbedding {
-                index: 2068313302,
-                value: 1.319545,
             },
             TokenEmbedding {
                 index: 3797284334,
                 value: 0.94239295,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.8477453,
-            },
-            TokenEmbedding {
-                index: 3470976773,
-                value: 1.5226731,
-            },
-            TokenEmbedding {
                 index: 1713164866,
                 value: 0.94239295,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8477453,
-            },
-            TokenEmbedding {
-                index: 3470976773,
-                value: 1.5226731,
             },
             TokenEmbedding {
                 index: 2140802846,
@@ -8910,10 +7128,6 @@ expression: embeddings
                 value: 0.94239295,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.8477453,
-            },
-            TokenEmbedding {
                 index: 1319118361,
                 value: 0.94239295,
             },
@@ -8922,24 +7136,12 @@ expression: embeddings
                 value: 0.94239295,
             },
             TokenEmbedding {
-                index: 2198465861,
-                value: 1.319545,
-            },
-            TokenEmbedding {
                 index: 1553184556,
                 value: 0.94239295,
             },
             TokenEmbedding {
-                index: 2704292977,
-                value: 1.319545,
-            },
-            TokenEmbedding {
                 index: 2367492922,
                 value: 0.94239295,
-            },
-            TokenEmbedding {
-                index: 1487363240,
-                value: 1.319545,
             },
             TokenEmbedding {
                 index: 2220834348,
@@ -8948,10 +7150,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3776700327,
                 value: 0.94239295,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.319545,
             },
             TokenEmbedding {
                 index: 1298851692,
@@ -8996,10 +7194,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 531594929,
                 value: 0.94239295,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.5226731,
             },
             TokenEmbedding {
                 index: 2333965122,
@@ -9050,10 +7244,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 1305276069,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
                 index: 2646367888,
                 value: 0.93692994,
             },
@@ -9076,10 +7266,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 279256016,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2978480791,
-                value: 1.5179064,
             },
             TokenEmbedding {
                 index: 2752514965,
@@ -9134,10 +7320,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2978480791,
-                value: 1.5179064,
-            },
-            TokenEmbedding {
                 index: 300763427,
                 value: 0.93692994,
             },
@@ -9174,10 +7356,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
                 index: 4146099564,
                 value: 0.93692994,
             },
@@ -9196,10 +7374,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 482606066,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 815787537,
-                value: 1.5179064,
             },
             TokenEmbedding {
                 index: 2422101712,
@@ -9226,10 +7400,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 815787537,
-                value: 1.5179064,
-            },
-            TokenEmbedding {
                 index: 3790299978,
                 value: 0.93692994,
             },
@@ -9254,10 +7424,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2985722496,
-                value: 1.5179064,
-            },
-            TokenEmbedding {
                 index: 323367964,
                 value: 0.93692994,
             },
@@ -9270,14 +7436,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2985722496,
-                value: 1.5179064,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.5179064,
-            },
-            TokenEmbedding {
                 index: 1511485464,
                 value: 0.93692994,
             },
@@ -9288,18 +7446,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3776700327,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2467513641,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.5179064,
             },
             TokenEmbedding {
                 index: 2801814275,
@@ -9422,16 +7568,8 @@ expression: embeddings
                 value: 1.3698722,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
                 index: 4095307911,
                 value: 0.99458474,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.3698722,
             },
             TokenEmbedding {
                 index: 100738300,
@@ -9470,10 +7608,6 @@ expression: embeddings
                 value: 0.99458474,
             },
             TokenEmbedding {
-                index: 153143210,
-                value: 1.6884184,
-            },
-            TokenEmbedding {
                 index: 128247603,
                 value: 0.99458474,
             },
@@ -9494,22 +7628,6 @@ expression: embeddings
                 value: 0.99458474,
             },
             TokenEmbedding {
-                index: 153143210,
-                value: 1.6884184,
-            },
-            TokenEmbedding {
-                index: 2245566590,
-                value: 1.5669597,
-            },
-            TokenEmbedding {
-                index: 2735380755,
-                value: 1.5669597,
-            },
-            TokenEmbedding {
-                index: 1083407940,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
                 index: 746694451,
                 value: 0.99458474,
             },
@@ -9526,20 +7644,8 @@ expression: embeddings
                 value: 0.99458474,
             },
             TokenEmbedding {
-                index: 153143210,
-                value: 1.6884184,
-            },
-            TokenEmbedding {
                 index: 4051264454,
                 value: 0.99458474,
-            },
-            TokenEmbedding {
-                index: 2245566590,
-                value: 1.5669597,
-            },
-            TokenEmbedding {
-                index: 2735380755,
-                value: 1.5669597,
             },
             TokenEmbedding {
                 index: 613846705,
@@ -9552,14 +7658,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3405403236,
                 value: 0.99458474,
-            },
-            TokenEmbedding {
-                index: 3222518327,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
-                index: 1963879092,
-                value: 1.3698722,
             },
             TokenEmbedding {
                 index: 1551644309,
@@ -9576,14 +7674,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1805720113,
                 value: 0.99458474,
-            },
-            TokenEmbedding {
-                index: 1370496709,
-                value: 1.3698722,
-            },
-            TokenEmbedding {
-                index: 4216460842,
-                value: 1.3698722,
             },
             TokenEmbedding {
                 index: 1366469460,
@@ -9658,10 +7748,6 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.5371546,
-            },
-            TokenEmbedding {
                 index: 2858395313,
                 value: 0.9591708,
             },
@@ -9714,22 +7800,6 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 3948920979,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 281564403,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.5371546,
-            },
-            TokenEmbedding {
                 index: 2335850622,
                 value: 0.9591708,
             },
@@ -9750,14 +7820,6 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 406036687,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
-                index: 1212244386,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
                 index: 203670900,
                 value: 0.9591708,
             },
@@ -9768,10 +7830,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2864610811,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 3014028664,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 2985722496,
@@ -9798,14 +7856,6 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 406036687,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
-                index: 1212244386,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
                 index: 2033914538,
                 value: 0.9591708,
             },
@@ -9822,28 +7872,12 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 2985722496,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 3189812961,
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 2547231353,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 1724875223,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 406036687,
-                value: 1.6623698,
-            },
-            TokenEmbedding {
-                index: 1212244386,
-                value: 1.6623698,
             },
             TokenEmbedding {
                 index: 2054259455,
@@ -9862,16 +7896,8 @@ expression: embeddings
                 value: 0.9591708,
             },
             TokenEmbedding {
-                index: 2733868467,
-                value: 1.3359048,
-            },
-            TokenEmbedding {
                 index: 416239530,
                 value: 0.9591708,
-            },
-            TokenEmbedding {
-                index: 1555982965,
-                value: 1.3359048,
             },
             TokenEmbedding {
                 index: 194203390,
@@ -9922,10 +7948,6 @@ expression: embeddings
                 value: 0.82249963,
             },
             TokenEmbedding {
-                index: 2604124275,
-                value: 1.5507228,
-            },
-            TokenEmbedding {
                 index: 2657907827,
                 value: 1.1973528,
             },
@@ -9956,10 +7978,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2560648970,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7199206,
             },
             TokenEmbedding {
                 index: 2068313302,
@@ -10002,10 +8020,6 @@ expression: embeddings
                 value: 0.82249963,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7199206,
-            },
-            TokenEmbedding {
                 index: 157031926,
                 value: 0.82249963,
             },
@@ -10016,10 +8030,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 4216460842,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 1553184556,
-                value: 1.4118333,
             },
             TokenEmbedding {
                 index: 3662991037,
@@ -10046,10 +8056,6 @@ expression: embeddings
                 value: 0.82249963,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7199206,
-            },
-            TokenEmbedding {
                 index: 1319118361,
                 value: 1.1973528,
             },
@@ -10062,28 +8068,12 @@ expression: embeddings
                 value: 1.4118333,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7199206,
-            },
-            TokenEmbedding {
                 index: 2163466090,
                 value: 0.82249963,
             },
             TokenEmbedding {
                 index: 1552462250,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7199206,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.1973528,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.1973528,
             },
             TokenEmbedding {
                 index: 1200123249,
@@ -10096,10 +8086,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3076024348,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 2604124275,
-                value: 1.5507228,
             },
             TokenEmbedding {
                 index: 412886019,
@@ -10126,16 +8112,8 @@ expression: embeddings
                 value: 0.82249963,
             },
             TokenEmbedding {
-                index: 2985722496,
-                value: 1.5507228,
-            },
-            TokenEmbedding {
                 index: 107042942,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 2657907827,
-                value: 1.1973528,
             },
             TokenEmbedding {
                 index: 1310397483,
@@ -10146,32 +8124,16 @@ expression: embeddings
                 value: 0.82249963,
             },
             TokenEmbedding {
-                index: 2622748957,
-                value: 1.1973528,
-            },
-            TokenEmbedding {
                 index: 1212244386,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 1200123249,
-                value: 1.1973528,
             },
             TokenEmbedding {
                 index: 3720994354,
                 value: 1.1973528,
             },
             TokenEmbedding {
-                index: 531594929,
-                value: 1.4118333,
-            },
-            TokenEmbedding {
                 index: 3411032577,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 2985722496,
-                value: 1.5507228,
             },
             TokenEmbedding {
                 index: 3357300674,
@@ -10180,18 +8142,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2690271182,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 2985722496,
-                value: 1.5507228,
-            },
-            TokenEmbedding {
-                index: 4176925827,
-                value: 1.1973528,
-            },
-            TokenEmbedding {
-                index: 3720994354,
-                value: 1.1973528,
             },
             TokenEmbedding {
                 index: 186091713,
@@ -10206,10 +8156,6 @@ expression: embeddings
                 value: 1.1973528,
             },
             TokenEmbedding {
-                index: 3219599024,
-                value: 1.4118333,
-            },
-            TokenEmbedding {
                 index: 1511485464,
                 value: 1.1973528,
             },
@@ -10218,24 +8164,8 @@ expression: embeddings
                 value: 0.82249963,
             },
             TokenEmbedding {
-                index: 90340186,
-                value: 1.5507228,
-            },
-            TokenEmbedding {
                 index: 2211476128,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 2751532746,
-                value: 1.1973528,
-            },
-            TokenEmbedding {
-                index: 3219599024,
-                value: 1.4118333,
-            },
-            TokenEmbedding {
-                index: 1511485464,
-                value: 1.1973528,
             },
             TokenEmbedding {
                 index: 1259543504,
@@ -10246,36 +8176,12 @@ expression: embeddings
                 value: 0.82249963,
             },
             TokenEmbedding {
-                index: 90340186,
-                value: 1.5507228,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.4118333,
-            },
-            TokenEmbedding {
                 index: 2801814275,
                 value: 0.82249963,
             },
             TokenEmbedding {
                 index: 4166207601,
                 value: 0.82249963,
-            },
-            TokenEmbedding {
-                index: 1553184556,
-                value: 1.4118333,
-            },
-            TokenEmbedding {
-                index: 2604124275,
-                value: 1.5507228,
-            },
-            TokenEmbedding {
-                index: 3662991037,
-                value: 1.1973528,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.5507228,
             },
             TokenEmbedding {
                 index: 1534249892,
@@ -10350,14 +8256,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
                 index: 3624083813,
                 value: 0.93692994,
             },
@@ -10366,20 +8264,8 @@ expression: embeddings
                 value: 1.3141804,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
                 index: 3753032443,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2858395313,
-                value: 1.3141804,
             },
             TokenEmbedding {
                 index: 3658666936,
@@ -10410,10 +8296,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.645446,
-            },
-            TokenEmbedding {
                 index: 157101613,
                 value: 1.5179064,
             },
@@ -10426,10 +8308,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 3948920979,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
                 index: 613846705,
                 value: 0.93692994,
             },
@@ -10438,36 +8316,12 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
                 index: 300763427,
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.5179064,
-            },
-            TokenEmbedding {
                 index: 183901823,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.645446,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.5179064,
             },
             TokenEmbedding {
                 index: 2752514965,
@@ -10498,14 +8352,6 @@ expression: embeddings
                 value: 0.93692994,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.645446,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7328035,
-            },
-            TokenEmbedding {
                 index: 2431010611,
                 value: 0.93692994,
             },
@@ -10520,10 +8366,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 4146099564,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 2501400216,
-                value: 1.3141804,
             },
             TokenEmbedding {
                 index: 1461838371,
@@ -10572,14 +8414,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1606870455,
                 value: 0.93692994,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3141804,
-            },
-            TokenEmbedding {
-                index: 3597055197,
-                value: 1.3141804,
             },
             TokenEmbedding {
                 index: 1534249892,
@@ -10674,10 +8508,6 @@ expression: embeddings
                 value: 1.0810666,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.6356766,
-            },
-            TokenEmbedding {
                 index: 337194249,
                 value: 1.0810666,
             },
@@ -10690,10 +8520,6 @@ expression: embeddings
                 value: 1.0810666,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.6356766,
-            },
-            TokenEmbedding {
                 index: 4095307911,
                 value: 1.0810666,
             },
@@ -10704,10 +8530,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 885275795,
                 value: 1.0810666,
-            },
-            TokenEmbedding {
-                index: 1553184556,
-                value: 1.4497399,
             },
             TokenEmbedding {
                 index: 1212244386,
@@ -10738,10 +8560,6 @@ expression: embeddings
                 value: 1.0810666,
             },
             TokenEmbedding {
-                index: 1553999385,
-                value: 1.4497399,
-            },
-            TokenEmbedding {
                 index: 4294589195,
                 value: 1.4497399,
             },
@@ -10758,10 +8576,6 @@ expression: embeddings
                 value: 1.0810666,
             },
             TokenEmbedding {
-                index: 4294589195,
-                value: 1.4497399,
-            },
-            TokenEmbedding {
                 index: 1290557616,
                 value: 1.0810666,
             },
@@ -10772,10 +8586,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3487297273,
                 value: 1.0810666,
-            },
-            TokenEmbedding {
-                index: 3647363686,
-                value: 1.4497399,
             },
             TokenEmbedding {
                 index: 1200123249,
@@ -10792,10 +8602,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3797284334,
                 value: 1.0810666,
-            },
-            TokenEmbedding {
-                index: 1200123249,
-                value: 1.4497399,
             },
             TokenEmbedding {
                 index: 531594929,
@@ -10926,40 +8732,8 @@ expression: embeddings
                 value: 1.2245681,
             },
             TokenEmbedding {
-                index: 1319118361,
-                value: 1.7384198,
-            },
-            TokenEmbedding {
-                index: 300763427,
-                value: 1.2245681,
-            },
-            TokenEmbedding {
-                index: 107042942,
-                value: 1.2245681,
-            },
-            TokenEmbedding {
-                index: 1555982965,
-                value: 1.2245681,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7384198,
-            },
-            TokenEmbedding {
                 index: 501885779,
                 value: 0.8484043,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8691407,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8691407,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7921349,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -10970,32 +8744,8 @@ expression: embeddings
                 value: 0.8484043,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.8691407,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8691407,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7921349,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.5733663,
-            },
-            TokenEmbedding {
                 index: 183901823,
                 value: 0.8484043,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8691407,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.5733663,
             },
             TokenEmbedding {
                 index: 2752514965,
@@ -11006,48 +8756,16 @@ expression: embeddings
                 value: 0.8484043,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.7921349,
-            },
-            TokenEmbedding {
                 index: 2418291178,
                 value: 0.8484043,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.8691407,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7384198,
             },
             TokenEmbedding {
                 index: 3083034654,
                 value: 0.8484043,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.8691407,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7921349,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7384198,
-            },
-            TokenEmbedding {
                 index: 1741320623,
                 value: 0.8484043,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7921349,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.5733663,
             },
             TokenEmbedding {
                 index: 4284130587,
@@ -11064,10 +8782,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1212244386,
                 value: 0.8484043,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.7921349,
             },
             TokenEmbedding {
                 index: 90340186,
@@ -11090,14 +8804,6 @@ expression: embeddings
                 value: 0.8484043,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.8691407,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.7384198,
-            },
-            TokenEmbedding {
                 index: 222766608,
                 value: 0.8484043,
             },
@@ -11116,10 +8822,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1815803383,
                 value: 0.8484043,
-            },
-            TokenEmbedding {
-                index: 3358882757,
-                value: 1.2245681,
             },
             TokenEmbedding {
                 index: 2409636210,
@@ -11144,10 +8846,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 911647662,
                 value: 0.8484043,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.436937,
             },
             TokenEmbedding {
                 index: 3969681214,
@@ -11178,14 +8876,6 @@ expression: embeddings
                 value: 0.8484043,
             },
             TokenEmbedding {
-                index: 90340186,
-                value: 1.436937,
-            },
-            TokenEmbedding {
-                index: 729520219,
-                value: 1.2245681,
-            },
-            TokenEmbedding {
                 index: 1534249892,
                 value: 1.2245681,
             },
@@ -11196,10 +8886,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3252996580,
                 value: 0.8484043,
-            },
-            TokenEmbedding {
-                index: 1534249892,
-                value: 1.2245681,
             },
             TokenEmbedding {
                 index: 366818093,
@@ -11274,10 +8960,6 @@ expression: embeddings
                 value: 0.9156972,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.6288631,
-            },
-            TokenEmbedding {
                 index: 4146099564,
                 value: 1.4991343,
             },
@@ -11286,20 +8968,8 @@ expression: embeddings
                 value: 0.9156972,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7831715,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.4991343,
-            },
-            TokenEmbedding {
                 index: 1245586502,
                 value: 0.9156972,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7831715,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -11312,14 +8982,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1430537272,
                 value: 0.9156972,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.6288631,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.4991343,
             },
             TokenEmbedding {
                 index: 1741320623,
@@ -11390,32 +9052,12 @@ expression: embeddings
                 value: 0.9156972,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.4991343,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6288631,
-            },
-            TokenEmbedding {
                 index: 4152429924,
                 value: 0.9156972,
             },
             TokenEmbedding {
                 index: 2670492324,
                 value: 0.9156972,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6288631,
-            },
-            TokenEmbedding {
-                index: 482606066,
-                value: 1.2931513,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7831715,
             },
             TokenEmbedding {
                 index: 1206234184,
@@ -11426,24 +9068,8 @@ expression: embeddings
                 value: 0.9156972,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7831715,
-            },
-            TokenEmbedding {
-                index: 1206234184,
-                value: 1.2931513,
-            },
-            TokenEmbedding {
                 index: 1579553557,
                 value: 0.9156972,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7831715,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.2931513,
             },
             TokenEmbedding {
                 index: 2319211981,
@@ -11454,14 +9080,6 @@ expression: embeddings
                 value: 1.2931513,
             },
             TokenEmbedding {
-                index: 1555982965,
-                value: 1.2931513,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.4991343,
-            },
-            TokenEmbedding {
                 index: 1453371039,
                 value: 0.9156972,
             },
@@ -11470,16 +9088,8 @@ expression: embeddings
                 value: 0.9156972,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.4991343,
-            },
-            TokenEmbedding {
                 index: 4051264454,
                 value: 0.9156972,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.6288631,
             },
             TokenEmbedding {
                 index: 1815803383,
@@ -11490,32 +9100,12 @@ expression: embeddings
                 value: 1.2931513,
             },
             TokenEmbedding {
-                index: 3955284103,
-                value: 1.2931513,
-            },
-            TokenEmbedding {
                 index: 1487363240,
                 value: 0.9156972,
             },
             TokenEmbedding {
                 index: 1259543504,
                 value: 0.9156972,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.6288631,
-            },
-            TokenEmbedding {
-                index: 107042942,
-                value: 1.2931513,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.4991343,
-            },
-            TokenEmbedding {
-                index: 4216460842,
-                value: 1.2931513,
             },
             TokenEmbedding {
                 index: 3111366779,
@@ -11606,16 +9196,8 @@ expression: embeddings
                 value: 1.0261576,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.3995266,
-            },
-            TokenEmbedding {
                 index: 4146099564,
                 value: 1.0261576,
-            },
-            TokenEmbedding {
-                index: 2001115021,
-                value: 1.3995266,
             },
             TokenEmbedding {
                 index: 2801694572,
@@ -11698,10 +9280,6 @@ expression: embeddings
                 value: 1.3995266,
             },
             TokenEmbedding {
-                index: 1453371039,
-                value: 1.3995266,
-            },
-            TokenEmbedding {
                 index: 68622081,
                 value: 1.0261576,
             },
@@ -11722,10 +9300,6 @@ expression: embeddings
                 value: 1.0261576,
             },
             TokenEmbedding {
-                index: 2359789015,
-                value: 1.3995266,
-            },
-            TokenEmbedding {
                 index: 2419190418,
                 value: 1.0261576,
             },
@@ -11742,28 +9316,12 @@ expression: embeddings
                 value: 1.0261576,
             },
             TokenEmbedding {
-                index: 73437208,
-                value: 1.3995266,
-            },
-            TokenEmbedding {
-                index: 1511485464,
-                value: 1.3995266,
-            },
-            TokenEmbedding {
                 index: 1259543504,
                 value: 1.0261576,
             },
             TokenEmbedding {
-                index: 107042942,
-                value: 1.3995266,
-            },
-            TokenEmbedding {
                 index: 2539441932,
                 value: 1.0261576,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3995266,
             },
             TokenEmbedding {
                 index: 531594929,
@@ -11776,10 +9334,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 4166207601,
                 value: 1.0261576,
-            },
-            TokenEmbedding {
-                index: 1146430651,
-                value: 1.3995266,
             },
             TokenEmbedding {
                 index: 3068588152,
@@ -11830,20 +9384,12 @@ expression: embeddings
                 value: 1.0460821,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.9005107,
-            },
-            TokenEmbedding {
                 index: 3723935981,
                 value: 1.0460821,
             },
             TokenEmbedding {
                 index: 1847420174,
                 value: 1.0460821,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.9005107,
             },
             TokenEmbedding {
                 index: 2950163091,
@@ -11862,20 +9408,12 @@ expression: embeddings
                 value: 1.0460821,
             },
             TokenEmbedding {
-                index: 2501400216,
-                value: 1.4179437,
-            },
-            TokenEmbedding {
                 index: 3948920979,
                 value: 1.4179437,
             },
             TokenEmbedding {
                 index: 150648461,
                 value: 1.0460821,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.9005107,
             },
             TokenEmbedding {
                 index: 4095307911,
@@ -11892,18 +9430,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2667736356,
                 value: 1.0460821,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.9005107,
-            },
-            TokenEmbedding {
-                index: 1555982965,
-                value: 1.6085457,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.6085457,
             },
             TokenEmbedding {
                 index: 1282067105,
@@ -11926,32 +9452,12 @@ expression: embeddings
                 value: 1.0460821,
             },
             TokenEmbedding {
-                index: 3948920979,
-                value: 1.4179437,
-            },
-            TokenEmbedding {
                 index: 1583594003,
                 value: 1.0460821,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.9005107,
-            },
-            TokenEmbedding {
-                index: 1555982965,
-                value: 1.6085457,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.6085457,
-            },
-            TokenEmbedding {
                 index: 2735291143,
                 value: 1.0460821,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.4179437,
             },
             TokenEmbedding {
                 index: 4146099564,
@@ -11960,10 +9466,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1879631425,
                 value: 1.0460821,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.9005107,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -11996,10 +9498,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2472561585,
                 value: 1.0460821,
-            },
-            TokenEmbedding {
-                index: 4044364892,
-                value: 1.4179437,
             },
             TokenEmbedding {
                 index: 381474508,
@@ -12138,10 +9636,6 @@ expression: embeddings
                 value: 1.000743,
             },
             TokenEmbedding {
-                index: 3983061107,
-                value: 1.3757023,
-            },
-            TokenEmbedding {
                 index: 107042942,
                 value: 1.000743,
             },
@@ -12174,20 +9668,8 @@ expression: embeddings
                 value: 1.000743,
             },
             TokenEmbedding {
-                index: 3301695699,
-                value: 1.3757023,
-            },
-            TokenEmbedding {
-                index: 1151211222,
-                value: 1.3757023,
-            },
-            TokenEmbedding {
                 index: 1678873488,
                 value: 1.000743,
-            },
-            TokenEmbedding {
-                index: 2501400216,
-                value: 1.3757023,
             },
             TokenEmbedding {
                 index: 3189781669,
@@ -12228,10 +9710,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3487297273,
                 value: 1.000743,
-            },
-            TokenEmbedding {
-                index: 3647363686,
-                value: 1.3757023,
             },
             TokenEmbedding {
                 index: 1352460907,
@@ -12354,10 +9832,6 @@ expression: embeddings
                 value: 1.0738838,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.6301776,
-            },
-            TokenEmbedding {
                 index: 90340186,
                 value: 1.0738838,
             },
@@ -12390,10 +9864,6 @@ expression: embeddings
                 value: 1.0738838,
             },
             TokenEmbedding {
-                index: 825923244,
-                value: 1.6301776,
-            },
-            TokenEmbedding {
                 index: 2646367888,
                 value: 1.4432671,
             },
@@ -12406,20 +9876,8 @@ expression: embeddings
                 value: 1.6301776,
             },
             TokenEmbedding {
-                index: 4081577049,
-                value: 1.4432671,
-            },
-            TokenEmbedding {
                 index: 2472561585,
                 value: 1.0738838,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.4432671,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.6301776,
             },
             TokenEmbedding {
                 index: 2001115021,
@@ -12428,18 +9886,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3405258374,
                 value: 1.0738838,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.4432671,
-            },
-            TokenEmbedding {
-                index: 1555982965,
-                value: 1.4432671,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.6301776,
             },
             TokenEmbedding {
                 index: 1200123249,
@@ -12452,10 +9898,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2284717444,
                 value: 1.0738838,
-            },
-            TokenEmbedding {
-                index: 2501400216,
-                value: 1.4432671,
             },
             TokenEmbedding {
                 index: 1295547058,
@@ -12488,10 +9930,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1366469460,
                 value: 1.0738838,
-            },
-            TokenEmbedding {
-                index: 1045432453,
-                value: 1.4432671,
             },
             TokenEmbedding {
                 index: 2997412071,
@@ -12566,10 +10004,6 @@ expression: embeddings
                 value: 1.3249536,
             },
             TokenEmbedding {
-                index: 2309897179,
-                value: 1.6538645,
-            },
-            TokenEmbedding {
                 index: 2657907827,
                 value: 0.94791996,
             },
@@ -12604,14 +10038,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 482606066,
                 value: 0.94791996,
-            },
-            TokenEmbedding {
-                index: 2796357629,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 2425206056,
-                value: 1.3249536,
             },
             TokenEmbedding {
                 index: 2816113161,
@@ -12662,10 +10088,6 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 1553184556,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
                 index: 2539441932,
                 value: 0.94791996,
             },
@@ -12676,10 +10098,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 2367492922,
                 value: 0.94791996,
-            },
-            TokenEmbedding {
-                index: 2501400216,
-                value: 1.3249536,
             },
             TokenEmbedding {
                 index: 3948920979,
@@ -12694,16 +10112,8 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 2309897179,
-                value: 1.6538645,
-            },
-            TokenEmbedding {
                 index: 4095288870,
                 value: 0.94791996,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.5274698,
             },
             TokenEmbedding {
                 index: 1319118361,
@@ -12718,16 +10128,8 @@ expression: embeddings
                 value: 1.3249536,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
                 index: 4095307911,
                 value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.5274698,
             },
             TokenEmbedding {
                 index: 1200123249,
@@ -12758,18 +10160,6 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
-                index: 1200123249,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
                 index: 3720994354,
                 value: 0.94791996,
             },
@@ -12786,32 +10176,12 @@ expression: embeddings
                 value: 0.94791996,
             },
             TokenEmbedding {
-                index: 90340186,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
-                index: 531594929,
-                value: 1.3249536,
-            },
-            TokenEmbedding {
                 index: 2801814275,
                 value: 0.94791996,
             },
             TokenEmbedding {
                 index: 4166207601,
                 value: 0.94791996,
-            },
-            TokenEmbedding {
-                index: 1553184556,
-                value: 1.5274698,
-            },
-            TokenEmbedding {
-                index: 2309897179,
-                value: 1.6538645,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.5274698,
             },
             TokenEmbedding {
                 index: 1534249892,
@@ -12882,10 +10252,6 @@ expression: embeddings
                 value: 1.7669009,
             },
             TokenEmbedding {
-                index: 3470976773,
-                value: 1.3640916,
-            },
-            TokenEmbedding {
                 index: 2038689511,
                 value: 0.9885021,
             },
@@ -12894,20 +10260,8 @@ expression: embeddings
                 value: 0.9885021,
             },
             TokenEmbedding {
-                index: 4095307911,
-                value: 1.6840205,
-            },
-            TokenEmbedding {
-                index: 2501400216,
-                value: 1.3640916,
-            },
-            TokenEmbedding {
                 index: 2418291178,
                 value: 0.9885021,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7669009,
             },
             TokenEmbedding {
                 index: 157101613,
@@ -12918,18 +10272,6 @@ expression: embeddings
                 value: 0.9885021,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7669009,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.6840205,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.6840205,
-            },
-            TokenEmbedding {
                 index: 3698218434,
                 value: 1.3640916,
             },
@@ -12938,36 +10280,12 @@ expression: embeddings
                 value: 0.9885021,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.7669009,
-            },
-            TokenEmbedding {
                 index: 1555982965,
                 value: 0.9885021,
             },
             TokenEmbedding {
-                index: 157101613,
-                value: 1.6840205,
-            },
-            TokenEmbedding {
-                index: 3698218434,
-                value: 1.3640916,
-            },
-            TokenEmbedding {
                 index: 2689626784,
                 value: 0.9885021,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.7669009,
-            },
-            TokenEmbedding {
-                index: 4095307911,
-                value: 1.6840205,
-            },
-            TokenEmbedding {
-                index: 157101613,
-                value: 1.6840205,
             },
             TokenEmbedding {
                 index: 2752514965,
@@ -13038,10 +10356,6 @@ expression: embeddings
                 value: 0.9885021,
             },
             TokenEmbedding {
-                index: 1511485464,
-                value: 1.3640916,
-            },
-            TokenEmbedding {
                 index: 1259543504,
                 value: 0.9885021,
             },
@@ -13052,10 +10366,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3262036055,
                 value: 0.9885021,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.3640916,
             },
             TokenEmbedding {
                 index: 1043111891,
@@ -13076,10 +10386,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 1553184556,
                 value: 0.9885021,
-            },
-            TokenEmbedding {
-                index: 1065245734,
-                value: 1.3640916,
             },
             TokenEmbedding {
                 index: 3252996580,
@@ -13210,14 +10516,6 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 3536047372,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
-                index: 482606066,
-                value: 1.2983452,
-            },
-            TokenEmbedding {
                 index: 107042942,
                 value: 0.92091465,
             },
@@ -13230,24 +10528,8 @@ expression: embeddings
                 value: 1.5037837,
             },
             TokenEmbedding {
-                index: 3536047372,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
                 index: 1834151639,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 150648461,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
-                index: 1555982965,
-                value: 1.2983452,
-            },
-            TokenEmbedding {
-                index: 1319118361,
-                value: 1.2983452,
             },
             TokenEmbedding {
                 index: 885275795,
@@ -13256,14 +10538,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 787362011,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.6329775,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.5037837,
             },
             TokenEmbedding {
                 index: 2868144997,
@@ -13282,20 +10556,8 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 2646367888,
-                value: 1.6329775,
-            },
-            TokenEmbedding {
-                index: 4146099564,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
                 index: 3162145734,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 2198465861,
-                value: 1.5037837,
             },
             TokenEmbedding {
                 index: 2544814395,
@@ -13314,10 +10576,6 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 3994366258,
-                value: 1.2983452,
-            },
-            TokenEmbedding {
                 index: 1553184556,
                 value: 1.2983452,
             },
@@ -13326,28 +10584,12 @@ expression: embeddings
                 value: 0.92091465,
             },
             TokenEmbedding {
-                index: 90340186,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
                 index: 2367492922,
                 value: 1.2983452,
             },
             TokenEmbedding {
-                index: 150648461,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
-                index: 2646367888,
-                value: 1.6329775,
-            },
-            TokenEmbedding {
                 index: 1810548072,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 1206234184,
-                value: 1.2983452,
             },
             TokenEmbedding {
                 index: 2230274439,
@@ -13356,14 +10598,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3452258142,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 2198465861,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
-                index: 1553184556,
-                value: 1.2983452,
             },
             TokenEmbedding {
                 index: 1259543504,
@@ -13376,14 +10610,6 @@ expression: embeddings
             TokenEmbedding {
                 index: 3662991037,
                 value: 0.92091465,
-            },
-            TokenEmbedding {
-                index: 90340186,
-                value: 1.5037837,
-            },
-            TokenEmbedding {
-                index: 2367492922,
-                value: 1.2983452,
             },
             TokenEmbedding {
                 index: 3405403236,

@@ -89,6 +89,8 @@ fn recipes_index_creation_language_mode(bencher: Bencher, language_mode: &Langua
             recipes.into_iter().for_each(|recipe| {
                 search_engine.upsert(recipe);
             });
+            // Include snapshot construction, not just the mutable staging vectors.
+            divan::black_box(search_engine.index());
         });
 }
 
@@ -101,4 +103,29 @@ fn search_language_mode(bencher: Bencher, language_mode: &LanguageMode) {
     let search_engine = create_recipe_search_engine(language_mode.clone());
 
     bencher.bench(|| search_engine.search("bacon sandwich", 20));
+}
+
+#[divan::bench]
+fn search_reused_borrowed(bencher: Bencher) {
+    let engine = create_recipe_search_engine(Language::English.into()).freeze();
+    let mut workspace = bm_25::SearchWorkspace::default();
+    let mut out = Vec::new();
+    engine.search_into("bacon sandwich", 20, &mut workspace, &mut out);
+    bencher.bench_local(|| {
+        engine.search_into("bacon sandwich", 20, &mut workspace, &mut out);
+        divan::black_box(&out);
+    });
+}
+
+#[divan::bench]
+fn complete_build(bencher: Bencher) {
+    let recipes: Vec<_> = read_recipes("recipes_en.csv")
+        .into_iter()
+        .map(BenchmarkRecipe)
+        .collect();
+    bencher
+        .with_inputs(|| recipes.clone())
+        .bench_values(|recipes| {
+            SearchEngineBuilder::<String>::with_documents(Language::English, recipes).build_frozen()
+        });
 }

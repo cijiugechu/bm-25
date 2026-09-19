@@ -38,5 +38,6 @@ pub mod tests {
         let recipes = read_recipes("recipes_en.csv");
         assert_eq!(recipes.len(), 50);
         assert_eq!(recipes[0].title, "French Toast");
+        assert!(!recipes[0].recipe.is_empty());
     }
 }

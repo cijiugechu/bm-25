@@ -7,7 +7,7 @@ use std::{
     fmt::{self, Debug, Display},
     hash::Hash,
     marker::PhantomData,
-    ops::{Deref, DerefMut},
+    ops::Deref,
 };
 
 pub type DefaultTokenEmbedder = u32;
@@ -43,6 +43,13 @@ pub struct TokenEmbedding<D = DefaultEmbeddingSpace> {
     pub value: f32,
 }
 
+impl<D> TokenEmbedding<D> {
+    /// Creates a token entry. `Embedding::new` and `Query::new` validate its weight.
+    pub fn new(index: D, value: f32) -> Self {
+        Self { index, value }
+    }
+}
+
 impl Display for TokenEmbedding {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(f, "{self:?}")
@@ -51,7 +58,7 @@ impl Display for TokenEmbedding {
 
 /// Represents a document embedded in a D-dimensional space.
 #[derive(PartialEq, Debug, Clone, PartialOrd)]
-pub struct Embedding<D = DefaultEmbeddingSpace>(pub Vec<TokenEmbedding<D>>);
+pub struct Embedding<D = DefaultEmbeddingSpace>(pub(crate) Vec<TokenEmbedding<D>>);
 
 impl<D> Deref for Embedding<D> {
     type Target = Vec<TokenEmbedding<D>>;
@@ -61,10 +68,28 @@ impl<D> Deref for Embedding<D> {
     }
 }
 
-impl DerefMut for Embedding {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
+impl<D: Eq + Hash + Clone> Embedding<D> {
+    /// Constructs a canonical document vector, keeping the first weight for each index.
+    /// Panics for negative or nonfinite weights. Zero weights are omitted.
+    pub fn new(tokens: impl IntoIterator<Item = TokenEmbedding<D>>) -> Self {
+        let mut seen = std::collections::HashSet::new();
+        let mut terms = Vec::new();
+        for token in tokens {
+            assert!(
+                token.value.is_finite() && token.value >= 0.0,
+                "document weights must be finite and nonnegative"
+            );
+            if seen.insert(token.index.clone()) && token.value != 0.0 {
+                terms.push(token);
+            }
+        }
+        Self(terms)
     }
+}
+
+pub(crate) struct DocumentTerms<D> {
+    pub(crate) terms: Vec<(D, u32)>,
+    pub(crate) len: usize,
 }
 
 impl<D> Embedding<D> {
@@ -86,9 +111,9 @@ impl<D: Debug> Display for Embedding<D> {
 }
 
 /// A trait for embedding. Implement this to customise the embedding space and function.
-pub trait TokenEmbedder {
+pub trait TokenEmbedder: Sync {
     /// The output type of the embedder, i.e., the embedding space.
-    type EmbeddingSpace;
+    type EmbeddingSpace: Eq + Hash + Clone + Send + Sync;
     /// Embeds a token into the embedding space.
     fn embed(token: &str) -> Self::EmbeddingSpace;
 }
@@ -133,45 +158,109 @@ impl<D, T> Embedder<D, T> {
         self.avgdl
     }
 
-    /// Embeds the given text into the embedding space.
+    /// Embeds the given text, producing one entry per distinct token index.
     pub fn embed(&self, text: &str) -> Embedding<D::EmbeddingSpace>
     where
         D: TokenEmbedder,
-        D::EmbeddingSpace: Eq + Hash,
+        D::EmbeddingSpace: Eq + Hash + Clone,
         T: Tokenizer,
+    {
+        let terms = self.count_terms(text, &mut crate::TokenizerScratch::default());
+        self.embed_terms(terms)
+    }
+
+    /// Tokenizes a query without computing document BM25 weights.
+    pub fn query(&self, text: &str) -> crate::Query<D::EmbeddingSpace>
+    where
+        D: TokenEmbedder,
+        D::EmbeddingSpace: Eq,
+        T: Tokenizer,
+    {
+        let mut query = crate::Query::default();
+        self.query_into(text, &mut crate::TokenizerScratch::default(), &mut query);
+        query
+    }
+
+    /// Reuses normalized-text and query buffers; duplicate words increase the query boost.
+    pub fn query_into(
+        &self,
+        text: &str,
+        scratch: &mut crate::TokenizerScratch,
+        query: &mut crate::Query<D::EmbeddingSpace>,
+    ) where
+        D: TokenEmbedder,
+        D::EmbeddingSpace: Eq,
+        T: Tokenizer,
+    {
+        query.clear();
+        self.tokenizer
+            .for_each_token(text, scratch, |s| query.push(D::embed(s), 1.0));
+    }
+
+    pub(crate) fn count_terms(
+        &self,
+        text: &str,
+        scratch: &mut crate::TokenizerScratch,
+    ) -> DocumentTerms<D::EmbeddingSpace>
+    where
+        D: TokenEmbedder,
+        D::EmbeddingSpace: Eq + Hash + Clone,
+        T: Tokenizer,
+    {
+        let mut positions = HashMap::new();
+        let mut terms: Vec<(D::EmbeddingSpace, u32)> = Vec::new();
+        let mut len = 0;
+        self.tokenizer.for_each_token(text, scratch, |s| {
+            let index = D::embed(s);
+            let position = *positions.entry(index.clone()).or_insert_with(|| {
+                terms.push((index, 0));
+                terms.len() - 1
+            });
+            terms[position].1 = terms[position]
+                .1
+                .checked_add(1)
+                .expect("token frequency exceeds u32");
+            len += 1;
+        });
+        DocumentTerms { terms, len }
+    }
+
+    pub(crate) fn set_avgdl(&mut self, avgdl: f32) {
+        self.avgdl = avgdl;
+    }
+
+    pub(crate) fn embed_terms(
+        &self,
+        terms: DocumentTerms<D::EmbeddingSpace>,
+    ) -> Embedding<D::EmbeddingSpace>
+    where
+        D: TokenEmbedder,
     {
         let avgdl = if self.avgdl <= 0.0 {
             Self::FALLBACK_AVGDL
         } else {
             self.avgdl
         };
-        let indices: Vec<D::EmbeddingSpace> = self
-            .tokenizer
-            .tokenize(text)
-            .map(|s| D::embed(&s))
-            .collect();
-        let len = indices.len();
-        let counts = indices.iter().fold(HashMap::new(), |mut acc, token| {
-            let count = acc.entry(token).or_insert(0);
-            *count += 1;
-            acc
-        });
-        let values: Vec<f32> = indices
-            .iter()
-            .map(|i| {
-                let token_frequency = *counts.get(i).unwrap_or(&0) as f32;
-                let numerator = token_frequency * (self.k1 + 1.0);
-                let denominator =
-                    token_frequency + self.k1 * (1.0 - self.b + self.b * (len as f32 / avgdl));
-                numerator / denominator
-            })
-            .collect();
-
+        let norm = if self.k1 == 0.0 {
+            0.0
+        } else if self.b == 0.0 {
+            self.k1
+        } else {
+            self.k1 * (1.0 - self.b + self.b * (terms.len as f32 / avgdl))
+        };
         Embedding(
-            indices
+            terms
+                .terms
                 .into_iter()
-                .zip(values)
-                .map(|(index, value)| TokenEmbedding { index, value })
+                .map(|(index, tf)| {
+                    let tf = tf as f32;
+                    let value = tf * (self.k1 + 1.0) / (tf + norm);
+                    assert!(
+                        value.is_finite() && value > 0.0,
+                        "BM25 weight overflow/underflow; use less extreme parameters"
+                    );
+                    TokenEmbedding { index, value }
+                })
                 .collect(),
         )
     }
@@ -226,7 +315,13 @@ impl<D, T> EmbedderBuilder<D, T> {
             #[cfg(feature = "parallelism")]
             let corpus_iter = corpus.par_iter();
             let total_len: u64 = corpus_iter
-                .map(|doc| tokenizer.tokenize(doc).count() as u64)
+                .map(|doc| {
+                    let mut count = 0;
+                    tokenizer.for_each_token(doc, &mut crate::TokenizerScratch::default(), |_| {
+                        count += 1
+                    });
+                    count
+                })
                 .sum();
             (total_len as f64 / corpus.len() as f64) as f32
         };
@@ -260,8 +355,27 @@ impl<D, T> EmbedderBuilder<D, T> {
         EmbedderBuilder { tokenizer, ..self }
     }
 
-    /// Builds the Embedder.
+    pub(crate) fn with_tokenizer(tokenizer: T) -> Self {
+        Self {
+            k1: 1.2,
+            b: 0.75,
+            avgdl: 256.0,
+            tokenizer,
+            token_embedder_type: PhantomData,
+        }
+    }
+
+    /// Builds the Embedder. Panics for nonfinite parameters, negative k1, or b outside [0, 1].
     pub fn build(self) -> Embedder<D, T> {
+        assert!(
+            self.k1.is_finite() && self.k1 >= 0.0 && self.k1 < f32::MAX,
+            "invalid k1"
+        );
+        assert!(
+            self.b.is_finite() && (0.0..=1.0).contains(&self.b),
+            "invalid b"
+        );
+        assert!(self.avgdl.is_finite(), "invalid avgdl");
         Embedder {
             tokenizer: self.tokenizer,
             k1: self.k1,
@@ -297,7 +411,7 @@ impl<D> EmbedderBuilder<D, DefaultTokenizer> {
     }
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "default_tokenizer"))]
 #[allow(missing_docs)]
 mod tests {
     use insta::assert_debug_snapshot;
@@ -308,21 +422,6 @@ mod tests {
     };
 
     use super::*;
-
-    impl Embedding {
-        pub fn any() -> Self {
-            Embedding(vec![TokenEmbedding {
-                index: 1,
-                value: 1.0,
-            }])
-        }
-    }
-
-    impl<D> TokenEmbedding<D> {
-        pub fn new(index: D, value: f32) -> Self {
-            TokenEmbedding { index, value }
-        }
-    }
 
     fn embed_recipes(recipe_file: &str, language_mode: LanguageMode) -> Vec<Embedding> {
         let recipes = read_recipes(recipe_file);
@@ -362,7 +461,6 @@ mod tests {
             *embedding
                 == vec![
                     TokenEmbedding::new(866767497, 1.0),
-                    TokenEmbedding::new(666609503, 1.375),
                     TokenEmbedding::new(666609503, 1.375)
                 ]
         );
@@ -416,7 +514,7 @@ mod tests {
 
         assert_eq!(
             embedding.indices().cloned().collect::<Vec<_>>(),
-            vec![MyType(42), MyType(42)]
+            vec![MyType(42)]
         );
     }
 

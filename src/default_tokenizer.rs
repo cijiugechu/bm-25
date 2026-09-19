@@ -5,6 +5,7 @@ use std::{
     borrow::Cow,
     collections::HashSet,
     fmt::{self, Debug},
+    sync::Arc,
 };
 use stop_words::LANGUAGE as StopWordLanguage;
 #[cfg(feature = "language_detection")]
@@ -188,8 +189,8 @@ fn normalize(text: &str) -> Cow<'_, str> {
 }
 
 #[cached(size = 16)]
-fn get_stopwords(language: Language, normalized: bool) -> HashSet<String> {
-    match TryInto::<StopWordLanguage>::try_into(&language) {
+fn get_stopwords(language: Language, normalized: bool) -> Arc<HashSet<String>> {
+    Arc::new(match TryInto::<StopWordLanguage>::try_into(&language) {
         Err(_) => HashSet::new(),
         Ok(lang) => stop_words::get(lang)
             .iter()
@@ -198,84 +199,11 @@ fn get_stopwords(language: Language, normalized: bool) -> HashSet<String> {
                 false => w.to_string(),
             })
             .collect(),
-    }
+    })
 }
 
 fn get_stemmer(language: &Language) -> Stemmer {
     Stemmer::create(language.into())
-}
-
-struct WordIter {
-    text: String,
-    offset: usize,
-}
-
-impl WordIter {
-    fn new(text: String) -> Self {
-        WordIter { text, offset: 0 }
-    }
-}
-
-impl Iterator for WordIter {
-    type Item = String;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        use unicode_segmentation::UnicodeSegmentation;
-
-        let slice = &self.text[self.offset..];
-        let mut words = slice.unicode_word_indices();
-        let (relative_idx, word) = words.next()?;
-        self.offset += relative_idx + word.len();
-        Some(word.to_string())
-    }
-}
-
-struct TokenIterBorrowed<'a> {
-    word_iter: WordIter,
-    stopwords: &'a HashSet<String>,
-    stemmer: Option<&'a Stemmer>,
-}
-
-impl<'a> Iterator for TokenIterBorrowed<'a> {
-    type Item = String;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        loop {
-            let token = self.word_iter.next()?;
-            if self.stopwords.contains(&token) {
-                continue;
-            }
-            return Some(match self.stemmer {
-                Some(stemmer) => stemmer.stem(&token).to_string(),
-                None => token,
-            });
-        }
-    }
-}
-
-#[cfg(feature = "language_detection")]
-struct TokenIterOwned {
-    word_iter: WordIter,
-    stopwords: HashSet<String>,
-    stemmer: Option<Stemmer>,
-}
-
-#[cfg(feature = "language_detection")]
-impl Iterator for TokenIterOwned {
-    type Item = String;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        loop {
-            let token = self.word_iter.next()?;
-            if self.stopwords.contains(&token) {
-                continue;
-            }
-            return Some(match &self.stemmer {
-                Some(stemmer) => stemmer.stem(&token).to_string(),
-                None => token,
-            });
-        }
-    }
 }
 
 bitflags! {
@@ -313,7 +241,7 @@ struct Components {
     settings: Settings,
     normalizer: fn(&str) -> Cow<str>,
     stemmer: Option<Stemmer>,
-    stopwords: HashSet<String>,
+    stopwords: Arc<HashSet<String>>,
 }
 
 impl Components {
@@ -325,13 +253,16 @@ impl Components {
                 None
             }
         });
-        let stopwords = language.map_or_else(HashSet::new, |lang| {
-            if settings.stopwords_enabled() {
-                get_stopwords(*lang, settings.normalization_enabled())
-            } else {
-                HashSet::new()
-            }
-        });
+        let stopwords = language.map_or_else(
+            || Arc::new(HashSet::new()),
+            |lang| {
+                if settings.stopwords_enabled() {
+                    get_stopwords(*lang, settings.normalization_enabled())
+                } else {
+                    Arc::new(HashSet::new())
+                }
+            },
+        );
         let normalizer: fn(&str) -> Cow<str> = match settings.normalization_enabled() {
             true => normalize,
             false => |text: &str| Cow::from(text),
@@ -399,53 +330,61 @@ impl DefaultTokenizer {
         Language::try_from(whichlang::detect_language(text)).ok()
     }
 
-    fn tokenize<'a>(&'a self, input_text: &'a str) -> impl Iterator<Item = String> + 'a {
-        enum TokenStream<'a> {
-            Borrowed(TokenIterBorrowed<'a>),
-            #[cfg(feature = "language_detection")]
-            Owned(TokenIterOwned),
-        }
-
-        impl<'a> Iterator for TokenStream<'a> {
-            type Item = String;
-
-            fn next(&mut self) -> Option<Self::Item> {
-                match self {
-                    TokenStream::Borrowed(iter) => iter.next(),
-                    #[cfg(feature = "language_detection")]
-                    TokenStream::Owned(iter) => iter.next(),
-                }
-            }
-        }
-
-        let make_word_iter = |input: &str, normalizer: fn(&str) -> Cow<str>| {
-            WordIter::new(normalizer(input).to_lowercase())
-        };
-
-        match &self.resources {
-            Resources::Static(components) => TokenStream::Borrowed(TokenIterBorrowed {
-                word_iter: make_word_iter(input_text, components.normalizer),
-                stopwords: &components.stopwords,
-                stemmer: components.stemmer.as_ref(),
-            }),
+    fn visit(
+        &self,
+        input: &str,
+        scratch: &mut crate::TokenizerScratch,
+        mut visit: impl FnMut(&str),
+    ) {
+        #[cfg(feature = "language_detection")]
+        let dynamic;
+        let components = match &self.resources {
+            Resources::Static(components) => components,
             #[cfg(feature = "language_detection")]
             Resources::Dynamic(settings) => {
-                let detected_language = Self::detect_language(input_text);
-                let components = Components::new(*settings, detected_language.as_ref());
-
-                TokenStream::Owned(TokenIterOwned {
-                    word_iter: make_word_iter(input_text, components.normalizer),
-                    stopwords: components.stopwords,
-                    stemmer: components.stemmer,
-                })
+                dynamic = Components::new(*settings, Self::detect_language(input).as_ref());
+                &dynamic
+            }
+        };
+        let text = (components.normalizer)(input);
+        scratch.normalized.clear();
+        // Preserve Unicode lowercasing (including contextual mappings); ASCII needs no temporary.
+        if text.is_ascii() {
+            scratch
+                .normalized
+                .extend(text.bytes().map(|b| b.to_ascii_lowercase() as char));
+        } else {
+            scratch.normalized.push_str(&text.to_lowercase());
+        }
+        use unicode_segmentation::UnicodeSegmentation;
+        for word in scratch.normalized.unicode_words() {
+            if components.stopwords.contains(word) {
+                continue;
+            }
+            match &components.stemmer {
+                Some(stemmer) => visit(&stemmer.stem(word)),
+                None => visit(word),
             }
         }
     }
 }
 
 impl Tokenizer for DefaultTokenizer {
-    fn tokenize<'a>(&'a self, input_text: &'a str) -> impl Iterator<Item = String> + 'a {
-        DefaultTokenizer::tokenize(self, input_text)
+    fn tokenize<'a>(&'a self, input: &'a str) -> impl Iterator<Item = String> + 'a {
+        let mut tokens = Vec::new();
+        self.visit(input, &mut crate::TokenizerScratch::default(), |t| {
+            tokens.push(t.to_owned())
+        });
+        tokens.into_iter()
+    }
+
+    fn for_each_token(
+        &self,
+        input: &str,
+        scratch: &mut crate::TokenizerScratch,
+        visit: impl FnMut(&str),
+    ) {
+        self.visit(input, scratch, visit);
     }
 }
 

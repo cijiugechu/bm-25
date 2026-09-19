@@ -1,7 +1,7 @@
 use crate::DefaultTokenizer;
 use crate::{
     embedder::{DefaultTokenEmbedder, Embedder, EmbedderBuilder, TokenEmbedder},
-    scorer::{ScoredDocument, Scorer},
+    scorer::Scorer,
     Tokenizer,
 };
 use std::{
@@ -113,22 +113,50 @@ where
         })
     }
 
-    /// Searches the documents for the given query and returns the top `limit` results.
-    /// Only the document contents are searched, not the document ids.
+    /// Searches documents and returns owned top-k results.
     pub fn search(&self, query: &str, limit: impl Into<Option<usize>>) -> Vec<SearchResult<K>> {
-        let query_embedding = self.embedder.embed(query);
+        let mut results = Vec::new();
+        self.search_into(
+            query,
+            limit.into().unwrap_or(usize::MAX),
+            &mut crate::SearchWorkspace::default(),
+            &mut results,
+        );
+        crate::search_workspace::owned(results)
+    }
 
-        // Reduce search space by filtering out all documents whose score would be 0
-        let matches = self.scorer.matches(&query_embedding);
+    /// Searches with reusable buffers and borrowed document contents.
+    /// The first search after writes rebuilds the immutable index.
+    pub fn search_into<'a>(
+        &'a self,
+        query: &str,
+        limit: usize,
+        workspace: &mut crate::SearchWorkspace<D::EmbeddingSpace>,
+        out: &mut Vec<crate::SearchResultRef<'a, K>>,
+    ) {
+        crate::search_workspace::search_into(
+            &self.embedder,
+            self.scorer.snapshot(),
+            &self.documents,
+            query,
+            limit,
+            workspace,
+            out,
+        );
+    }
 
-        matches
-            .into_iter()
-            .take(limit.into().unwrap_or(usize::MAX))
-            .filter_map(|ScoredDocument { id, score }| {
-                self.get(&id)
-                    .map(|document| SearchResult { document, score })
-            })
-            .collect()
+    /// Builds or borrows the current scoring snapshot.
+    pub fn index(&self) -> &crate::FrozenIndex<K, D::EmbeddingSpace> {
+        self.scorer.snapshot()
+    }
+
+    /// Consumes the mutable engine, releasing forward vectors and freezing all statistics.
+    pub fn freeze(self) -> crate::FrozenSearchEngine<K, D, T> {
+        crate::FrozenSearchEngine {
+            embedder: self.embedder,
+            index: self.scorer.into_frozen(),
+            documents: self.documents,
+        }
     }
 }
 
@@ -137,6 +165,7 @@ where
 pub struct SearchEngineBuilder<K, D = DefaultTokenEmbedder, T = DefaultTokenizer> {
     embedder_builder: EmbedderBuilder<D, T>,
     documents: Vec<Document<K>>,
+    fit_avgdl: bool,
     document_id_type: PhantomData<K>,
     token_embedder_type: PhantomData<D>,
 }
@@ -165,6 +194,7 @@ where
         SearchEngineBuilder {
             embedder_builder: EmbedderBuilder::<D, T>::with_avgdl(avgdl),
             documents: Vec::new(),
+            fit_avgdl: false,
             document_id_type: PhantomData,
             token_embedder_type: PhantomData,
         }
@@ -179,13 +209,8 @@ where
     ) -> SearchEngineBuilder<K, D, T> {
         let documents = documents.into_iter().map(|d| d.into()).collect::<Vec<_>>();
         SearchEngineBuilder {
-            embedder_builder: EmbedderBuilder::<D, T>::with_tokenizer_and_fit_to_corpus(
-                tokenizer,
-                &documents
-                    .iter()
-                    .map(|d| d.contents.as_str())
-                    .collect::<Vec<_>>(),
-            ),
+            embedder_builder: EmbedderBuilder::<D, T>::with_tokenizer(tokenizer),
+            fit_avgdl: true,
             documents,
             document_id_type: PhantomData,
             token_embedder_type: PhantomData,
@@ -203,7 +228,12 @@ where
         let documents = corpus
             .into_iter()
             .enumerate()
-            .map(|(id, document)| Document::new(id as u32, document.into()))
+            .map(|(id, document)| {
+                Document::new(
+                    u32::try_from(id).expect("document ID exceeds u32"),
+                    document.into(),
+                )
+            })
             .collect::<Vec<_>>();
         SearchEngineBuilder::<u32, D, T>::with_tokenizer_and_documents(tokenizer, documents)
     }
@@ -236,21 +266,58 @@ where
     pub fn avgdl(self, avgdl: f32) -> Self {
         Self {
             embedder_builder: self.embedder_builder.avgdl(avgdl),
+            fit_avgdl: false,
             ..self
         }
     }
 
-    /// Builds the search engine.
+    /// Builds the search engine. Fits and embeds each document using one tokenization pass.
     pub fn build(self) -> SearchEngine<K, D, T> {
-        let mut search_engine = SearchEngine::<K, D, T> {
-            embedder: self.embedder_builder.build(),
-            scorer: Scorer::<K, D::EmbeddingSpace>::new(),
+        let mut embedder = self.embedder_builder.build();
+        let texts: Vec<_> = self.documents.iter().map(|d| d.contents.as_str()).collect();
+        let count_serial = || {
+            let mut scratch = crate::TokenizerScratch::default();
+            texts
+                .iter()
+                .map(|text| embedder.count_terms(text, &mut scratch))
+                .collect::<Vec<_>>()
+        };
+        #[cfg(feature = "parallelism")]
+        let counted = if texts.len() >= 1024 {
+            use rayon::prelude::*;
+            texts
+                .par_iter()
+                .map_init(crate::TokenizerScratch::default, |scratch, text| {
+                    embedder.count_terms(text, scratch)
+                })
+                .collect::<Vec<_>>()
+        } else {
+            count_serial()
+        };
+        #[cfg(not(feature = "parallelism"))]
+        let counted = count_serial();
+        if self.fit_avgdl && !counted.is_empty() {
+            let total: u64 = counted.iter().map(|t| t.len as u64).sum();
+            embedder.set_avgdl((total as f64 / counted.len() as f64) as f32);
+        }
+        let mut engine = SearchEngine {
+            embedder,
+            scorer: Scorer::new(),
             documents: HashMap::new(),
         };
-        for document in self.documents {
-            search_engine.upsert(document);
+        for (document, terms) in self.documents.into_iter().zip(counted) {
+            let embedding = engine.embedder.embed_terms(terms);
+            engine.scorer.upsert(&document.id, embedding);
+            engine.documents.insert(document.id, document.contents);
         }
-        search_engine
+        // Freeze eagerly so search latency never hides initial index construction.
+        engine.scorer.snapshot();
+        engine
+    }
+
+    /// Builds a read-only engine and discards mutable forward vectors.
+    pub fn build_frozen(self) -> crate::FrozenSearchEngine<K, D, T> {
+        self.build().freeze()
     }
 }
 
@@ -293,7 +360,7 @@ where
     }
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "default_tokenizer"))]
 mod tests {
     use insta::assert_debug_snapshot;
 
@@ -356,7 +423,7 @@ mod tests {
     fn it_can_remove_a_document() {
         let mut search_engine = SearchEngineBuilder::<usize>::with_avgdl(2.0).build();
         let document = Document::new(123, "bananas and apples");
-        let document_id = document.id.clone();
+        let document_id = document.id;
 
         search_engine.upsert(document);
         search_engine.remove(&document_id);
